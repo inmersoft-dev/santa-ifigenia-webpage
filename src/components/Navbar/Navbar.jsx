@@ -21,6 +21,8 @@ import { useLanguage } from "../../context/LanguageProvider";
 
 // @emotion/css
 import { css } from "@emotion/css";
+
+// own components
 import Drawer from "../Drawer/Drawer";
 
 const Navbar = () => {
@@ -43,7 +45,7 @@ const Navbar = () => {
     };
   }, [onScroll]);
 
-  const [showDrawer, setShowDrawer] = useState();
+  const [showDrawer, setShowDrawer] = useState(false);
   const closeDrawer = () => setShowDrawer(false);
 
   return (

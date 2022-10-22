@@ -1,6 +1,6 @@
 {
   "name": "santa-ifigenia-webpage",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "private": true,
   "dependencies": {
     "@emotion/css": "^11.10.0",
