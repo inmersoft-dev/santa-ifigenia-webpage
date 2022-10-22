@@ -24,7 +24,7 @@ const NotFound = () => {
       }}
     >
       <SitoContainer flexDirection="column">
-        <Typography variant="h3">
+        <Typography color="primary" variant="h3">
           {languageState.texts.General.Company}
         </Typography>
         <SitoContainer sx={{ marginTop: "30px" }}>

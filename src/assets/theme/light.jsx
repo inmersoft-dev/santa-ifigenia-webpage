@@ -6,15 +6,15 @@ const light = createTheme({
   palette: {
     type: "light",
     primary: {
-      main: "#FC6011",
-      light: "#fc7f40",
-      dark: "#b0430b",
+      main: "#303342",
+      light: "#595b67",
+      dark: "#21232e",
       contrastText: "#ffffff",
     },
     secondary: {
-      main: "#11263C",
-      light: "#0b1a2a",
-      dark: "#405163",
+      main: "#645835",
+      light: "#a5976f",
+      dark: "#8F7E4C",
       contrastText: "#ffffff",
     },
     disabled: {
@@ -167,7 +167,11 @@ const light = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
-        body: darkScrollbar({ track: "#FFFFFF00", thumb: "#bdbbbb", active: "#bdbbbb" }),
+        body: darkScrollbar({
+          track: "#FFFFFF00",
+          thumb: "#bdbbbb",
+          active: "#bdbbbb",
+        }),
       },
     },
   },

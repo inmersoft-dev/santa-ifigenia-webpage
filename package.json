@@ -1,6 +1,6 @@
 {
   "name": "santa-ifigenia-webpage",
-  "version": "0.1.38",
+  "version": "0.2.2",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
