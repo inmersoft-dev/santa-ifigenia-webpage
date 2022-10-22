@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // theme
 import { ThemeProvider } from "@mui/material/styles";
-import dark from "./assets/theme/dark";
 import light from "./assets/theme/light";
 
 // @mui/x-date-pickers
@@ -14,9 +13,6 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 // @mui/material
 import { Box, CssBaseline } from "@mui/material";
-
-// contexts
-import { useMode } from "./context/ModeProvider";
 
 // own components
 import Notification from "./components/Notification/Notification";
@@ -29,15 +25,13 @@ import Home from "./views/Home/Home";
 import NotFound from "./views/NotFound/NotFound";
 
 const App = () => {
-  const { modeState } = useMode();
-
   useEffect(() => {
     document.body.style.transition = "all 200ms ease";
   }, []);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <ThemeProvider theme={modeState.mode === "light" ? light : dark}>
+      <ThemeProvider theme={light}>
         <CssBaseline />
         <Notification />
         <Box className="App">
