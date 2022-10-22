@@ -5,6 +5,13 @@
       "Body": "El URL solicitado no fue encontrado",
       "Button": "Regresar al inicio"
     },
+    "Empty": {
+      "Body": "No hay resultados"
+    },
+    "Error": {
+      "Body": "Ha ocurrido un error",
+      "Button": "Reintentar"
+    },
     "Navbar": {
       "Search": {
         "Placeholder": "Buscar..."
