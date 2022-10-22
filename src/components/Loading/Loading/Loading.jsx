@@ -5,7 +5,7 @@
 import PropTypes from "prop-types";
 
 // @mui components
-import { Box, useTheme } from "@mui/material";
+import { Box, useTheme, CircularProgress } from "@mui/material";
 
 // @mui/icons-material
 import LoopIcon from "@mui/icons-material/Loop";
@@ -34,7 +34,7 @@ const Loading = (props) => {
         ...sx,
       }}
     >
-      <LoopIcon sx={{ fontSize }} className="loading" color="primary" />
+      <CircularProgress />
     </Box>
   );
 };
