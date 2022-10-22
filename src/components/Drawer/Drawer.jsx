@@ -8,6 +8,9 @@ import { css } from "@emotion/css";
 // @mui/material;
 import { useTheme, Box, Button, IconButton, Typography } from "@mui/material";
 
+// react-cool-onclickoutside
+import useOnclickOutside from "react-cool-onclickoutside";
+
 // @mui/icons-material
 import { Cancel } from "@mui/icons-material";
 
@@ -21,67 +24,83 @@ const Drawer = (props) => {
 
   const { languageState } = useLanguage();
 
+  const ref = useOnclickOutside(() => {
+    handleClose();
+  });
+
   return (
     <Box
       sx={{
-        top: 0,
-        left: 0,
-        width: "450px",
-        zIndex: 9999999,
-        position: "fixed",
+        minWidth: "100%",
         minHeight: "100vh",
-        padding: "90px 20px",
+        position: "fixed",
         transition: "all 500ms ease",
-        backgroundColor: theme.palette.primary.main,
-        transform: visible ? "translateX(0px)" : "translateX(-450px)",
+        zIndex: visible ? 999999 : -1,
+        backgroundColor: visible ? `${theme.palette.primary.main}9c` : "",
       }}
     >
-      <IconButton
-        color="inherit"
-        onClick={handleClose}
+      <Box
+        ref={ref}
         sx={{
-          position: "absolute",
-          top: "20px",
-          right: "20px",
-          color: "aliceblue",
+          top: 0,
+          left: 0,
+          width: "450px",
+          zIndex: 9999999,
+          position: "fixed",
+          minHeight: "100vh",
+          padding: "90px 20px",
+          transition: "all 500ms ease",
+          backgroundColor: theme.palette.primary.main,
+          transform: visible ? "translateX(0px)" : "translateX(-450px)",
         }}
       >
-        <Cancel />
-      </IconButton>
-      <Link
-        className={css({ textDecoration: "none", color: "inherit" })}
-        to="/"
-      >
-        <Typography
-          variant="h4"
+        <IconButton
+          color="inherit"
+          onClick={handleClose}
           sx={{
-            fontWeight: "bold",
+            position: "absolute",
+            top: "20px",
+            right: "20px",
             color: "aliceblue",
           }}
         >
-          {languageState.texts.General.Company}
-        </Typography>
-      </Link>
-      <Box sx={{ marginTop: "40px" }}>
-        {languageState.texts.Navbar.DrawerLinks.map((item) => (
-          <Link
-            className={css({
-              textDecoration: "none",
-            })}
-            key={item.Label}
-            to={item.Link}
+          <Cancel />
+        </IconButton>
+        <Link
+          className={css({ textDecoration: "none", color: "inherit" })}
+          to="/"
+        >
+          <Typography
+            variant="h4"
+            sx={{
+              fontWeight: "bold",
+              color: "aliceblue",
+            }}
           >
-            <Button
-              sx={{
-                fontSize: "20px",
-                fontWeight: "bold",
-                color: "aliceblue",
-              }}
+            {languageState.texts.General.Company}
+          </Typography>
+        </Link>
+        <Box sx={{ marginTop: "40px" }}>
+          {languageState.texts.Navbar.DrawerLinks.map((item) => (
+            <Link
+              className={css({
+                textDecoration: "none",
+              })}
+              key={item.Label}
+              to={item.Link}
             >
-              {item.Label}
-            </Button>
-          </Link>
-        ))}
+              <Button
+                sx={{
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                  color: "aliceblue",
+                }}
+              >
+                {item.Label}
+              </Button>
+            </Link>
+          ))}
+        </Box>
       </Box>
     </Box>
   );
