@@ -6,9 +6,8 @@
     "@emotion/css": "^11.10.0",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@fontsource/libre-baskerville": "^4.5.10",
+    "@fontsource/eb-garamond": "^4.5.10",
     "@fontsource/roboto": "^4.5.8",
-    "@fontsource/roboto-slab": "^4.5.9",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.10",
     "@mui/x-date-pickers": "^5.0.5",
@@ -26,7 +25,7 @@
     "sito-mui-tab-view": "^0.5.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "env-cmd -f .env react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

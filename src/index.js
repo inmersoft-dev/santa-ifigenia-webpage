@@ -1,7 +1,6 @@
 import * as ReactDOMClient from "react-dom/client";
 import "@fontsource/roboto";
-import "@fontsource/roboto-slab";
-import "@fontsource/libre-baskerville"
+import "@fontsource/eb-garamond";
 
 // context
 import { LanguageProvider } from "./context/LanguageProvider";
