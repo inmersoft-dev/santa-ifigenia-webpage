@@ -8019,10 +8019,10 @@ sito-image@^0.13.1:
     react-dom "^18.2.0"
     react-scripts "5.0.1"
 
-sito-mui-tab-view@^0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/sito-mui-tab-view/-/sito-mui-tab-view-0.4.3.tgz#bcb3dbf827529ad571129e68889fac28d4b3faeb"
-  integrity sha512-ILKmsr1lNjQE/QPqil2B4gBOnWeRvqrpING6OQ8a2rWPMTolXUu3mxoIz0nagkG4vVi+GySz4IH1JMaQdz0ntw==
+sito-mui-tab-view@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/sito-mui-tab-view/-/sito-mui-tab-view-0.5.2.tgz#8382870504ca1d2381bc2d98df5dc525aea09e1e"
+  integrity sha512-zT9yPtlLzCmiITcyUmTSs1uj8tJoJDpMwtkOZH5MxE4rDGn2A86tVjXOY1I/HN9o8LJvQfKQXdzCcqUTTQ0GLA==
   dependencies:
     "@emotion/css" "^11.9.0"
     "@emotion/react" "^11.10.4"

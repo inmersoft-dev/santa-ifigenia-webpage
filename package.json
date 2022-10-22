@@ -1,6 +1,6 @@
 {
   "name": "santa-ifigenia-webpage",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -20,7 +20,7 @@
     "react-scripts": "5.0.1",
     "sito-container": "^0.4.1",
     "sito-image": "^0.13.1",
-    "sito-mui-tab-view": "^0.4.3"
+    "sito-mui-tab-view": "^0.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
