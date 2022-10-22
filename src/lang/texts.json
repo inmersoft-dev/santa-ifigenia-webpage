@@ -1,0 +1,867 @@
+{
+  "es": {
+    "Map": {
+      "Title": "Mapa",
+      "Inputs": {
+        "Longitude": {
+          "label": "Longitud",
+          "placeholder": "ej: -75.7119726"
+        },
+        "Latitude": {
+          "label": "Latitud",
+          "placeholder": "ej: 19.7521939"
+        }
+      },
+      "SearchAddressPlaceholder": "Escribe para buscar dirección"
+    },
+    "Menu": {
+      "Preview": "Vista previa",
+      "Delete": "Eliminar"
+    },
+    "All": {
+      "canComments": {
+        "news": "Noticias",
+        "events": "Eventos",
+        "places": "Lugares",
+        "routes": "Rutas"
+      },
+      "collections": {
+        "Lugares": "places",
+        "Rutas": "routes",
+        "Tipos de Lugares": "placeType",
+        "Formularios": "surveys",
+        "Noticias": "news"
+      },
+      "days": [
+        { "id": "sun", "label": "D", "name": "Domingo" },
+        { "id": "mon", "label": "L", "name": "Lunes" },
+        { "id": "tue", "label": "M", "name": "Martes" },
+        { "id": "wed", "label": "X", "name": "Miércoles" },
+        { "id": "thu", "label": "J", "name": "Jueves" },
+        { "id": "fri", "label": "V", "name": "Viernes" },
+        { "id": "sat", "label": "S", "name": "Sábado" }
+      ]
+    },
+    "Notifications": {
+      "SeeMore": "Ver todas",
+      "Titles": {
+        "backup request": "Petición de recuperación",
+        "backup approval": "Petición aprobada"
+      },
+      "Contents": {
+        "backup request": "[user] ha solicitado la restauración del respaldo [backup]",
+        "backup approval": "El usuario administrador ha aceptado la petición"
+      }
+    },
+    "Tooltips": {
+      "Add": "Agregar",
+      "Save": "Guardar",
+      "Delete": "Eliminar"
+    },
+    "Editor": {
+      "Labels": {
+        "NewOption": "Nueva opción",
+        "Video": "Video",
+        "Photo": "Foto",
+        "Text": "Caja de texto",
+        "TextQuestion": "Pregunta de texto",
+        "Checkbox": "Pregunta de múltiples opciones",
+        "Radio": "Pregunta de una sola opción",
+        "Emotions": "Pregunta de intensidad",
+        "Accordion": {
+          "Title": "Título",
+          "Content": "Contenido"
+        }
+      },
+      "Placeholders": {
+        "NewOption": "ej: Excelente",
+        "Video": "Dirección url del video",
+        "Text": "Alguna descripción",
+        "Checkbox": "ej: ¿Cuáles son los medios que más usas para enterarte de nuestras promociones? ",
+        "Radio": "j: ¿Qué es lo que más te gusta de Santa Ifigenia?",
+        "TextQuestion": "ej: ¿Qué te gustaría que tuviera la aplicación",
+        "Emotions": "ej: Del 1 al 5, ¿cómo calificarías tu última experiencia con nosotros?",
+        "Accordion": {
+          "Title": "ej: ¿Cómo llegar a Santa Ifigenia?",
+          "Content": "Alguna descripción"
+        }
+      },
+      "Tooltips": {
+        "AddOption": "Agregar opción",
+        "AddVideo": "Agregar vídeo",
+        "AddPhoto": "Agregar foto",
+        "AddText": "Agregar cuadro de texto",
+        "AddAccordion": "Agregar acordion",
+        "AddTextQuestion": "Agregar pregunta de texto",
+        "AddCheckbox": "Agregar pregunta de múltiples opciones",
+        "AddRadioButton": "Agregar pregunta de una sola opción",
+        "AddEmotion": "Agregar pregunta de intensidad"
+      }
+    },
+    "Details": {
+      "Inputs": {
+        "Labels": {
+          "video": "Url del video",
+          "web": "Url del sitio web",
+          "socialMedia": "Redes sociales",
+          "services": "Servicios",
+          "location": "Posición geográfica",
+          "placeType": "Tipos del Lugar",
+          "routes": "Rutas",
+          "pano": "Imagen panomármica",
+          "headerImages": "Imágenes de cabecera",
+          "headerImage": "Imagen de cabecera",
+          "openTime": "Abre",
+          "closeTime": "Cierra",
+          "sameSchedule": "Mismo horario",
+          "dayOff": "Feriado",
+          "question": "Pregunta",
+          "surveysName": "Nombre del formulario",
+          "title": "Título",
+          "subtitle": "Subtítulo",
+          "description": "Descripción"
+        },
+        "Placeholders": {
+          "video": "https://www.youtube.com/<mi-video>",
+          "web": "https://www.<mi-sitio-web>.com/",
+          "socialMedia": "https://www.<mi-red-social>.com",
+          "services": "Paseo por el parque",
+          "location": "46.75984,1.738281",
+          "placeType": "Vida Nocturna",
+          "routes": "Ruta de la Fundación",
+          "surveysName": "Ej: Cuestionario 1",
+          "option": "Ej: Palacio de Jigüey",
+          "question": "Ej: ¿Caúl es tu lugar favirito?",
+          "title": "Ej: La última noticia",
+          "subtitle": "Ej: Esta fue la primera noticia",
+          "description": "Alguna descripción..."
+        },
+        "Tooltips": {
+          "Add": "Agregar",
+          "video": "Dirección url del video",
+          "web": "Dirección url del sitio web",
+          "socialMedia": "Dirección url de una de las redes sociales",
+          "services": "Nombre de uno de los servicios",
+          "location": "Posición geográfica, formato: Lat, Lon",
+          "placeType": "Nombre de uno del tipos del lugar",
+          "routes": "Nombre de una de las rutas",
+          "pano": "Imagen en 360",
+          "headerImages": "Imágenes de cabecera",
+          "headerImage": "Imagen de cabecera",
+          "surveysName": "Nombre del formulario",
+          "question": "Pregunta",
+          "title": "Título",
+          "subtitle": "Subtítulo"
+        }
+      },
+      "Buttons": {
+        "Return": "Volver",
+        "Preview": "Vista previa",
+        "Next": "Siguiente",
+        "Back": "Atrás",
+        "Save": "Guardar",
+        "Upload": "Subir",
+        "Add": "Agregar",
+        "Insert": "Insertar"
+      },
+      "Titles": {
+        "Main": "Editando",
+        "Texts": "Textos",
+        "General": "General",
+        "Images": "Imágenes"
+      },
+      "Texts": {
+        "Labels": {
+          "UseTranslation": "Traducción automática"
+        }
+      }
+    },
+    "General": {
+      "Company": "Santa Ifigenia"
+    },
+    "Login": {
+      "Welcome": "Bienvenido a Santa Ifigenia Dashboard",
+      "Title": "Iniciar sesión",
+      "Inputs": {
+        "User": {
+          "Label": "Usuario",
+          "Placeholder": "ej: tusuario"
+        },
+        "Password": {
+          "Label": "Contraseña",
+          "Placeholder": "ej: *********"
+        },
+        "RPassword": {
+          "Label": "Confirmar contraseña",
+          "Placeholder": "ej: *********"
+        }
+      },
+      "Remember": "Recordarme",
+      "Buttons": {
+        "Login": "Iniciar sesión",
+        "Register": "Registrarse"
+      }
+    },
+    "HomeLang": {
+      "Home": {
+        "Tabs": ["Datos", "Notificaciones", "Registro"],
+        "Sections": [
+          {
+            "Title": "Datos",
+            "Inputs": [
+              {
+                "type": "text",
+                "label": "Usuario",
+                "disabled": true,
+                "required": true,
+                "id": "user",
+                "name": "user"
+              },
+              {
+                "type": "text",
+                "label": "Nombre",
+                "placeholder": "ej: Jose Arzuaga",
+                "disabled": false,
+                "required": true,
+                "id": "name",
+                "name": "name"
+              },
+              {
+                "type": "email",
+                "label": "Correo electrónico",
+                "placeholder": "email@email.com",
+                "disabled": false,
+                "required": true,
+                "id": "email",
+                "name": "email"
+              },
+              {
+                "type": "text",
+                "label": "Rol",
+                "placeholder": "web developer",
+                "disabled": false,
+                "required": true,
+                "id": "role",
+                "name": "role"
+              },
+              {
+                "type": "password",
+                "label": "Contraseña",
+                "placeholder": "ej:*******",
+                "disabled": true,
+                "required": false,
+                "id": "password",
+                "name": "password"
+              },
+              {
+                "type": "password",
+                "label": "Repetir contraseña",
+                "placeholder": "ej:*******",
+                "disabled": true,
+                "required": false,
+                "id": "rpassword",
+                "name": "rpassword"
+              }
+            ]
+          },
+          {}
+        ]
+      },
+      "Navbar": {
+        "Title": "Página Principal",
+        "Search": {
+          "Placeholder": "Buscar...",
+          "Label": "Buscar"
+        },
+        "SignOut": "Cerrar sesión",
+        "Tooltip": {
+          "SignOut": "Cerrar sesión",
+          "ChangeMode": "Cambiar modo",
+          "Notifications": "Notificaciones"
+        }
+      },
+      "Footer": {
+        "Company": "Inmersoft Copyright ©",
+        "Right": "Santa Ifigenia 2022"
+      },
+      "Sidebar": {
+        "Company": "Santa Ifigenia",
+        "Indexes": [
+          "Panel Aministrativo",
+          "Lugares",
+          "Tipos de Lugares",
+          "Rutas",
+          "Valoraciones",
+          "Campaña",
+          "Formularios",
+          "Mapa",
+          "Noticias",
+          "Eventos",
+          "Textos",
+          "Traducciones",
+          "Backup",
+          "Páginas de cuenta",
+          "Página Principal",
+          "Usuarios",
+          "Cerrar Sesión",
+          "Detalles"
+        ]
+      },
+      "Table": {
+        "SpecialModels": {
+          "Surveys": "Formularios",
+          "News": "Noticias",
+          "Events": "Eventos",
+          "Texts": "Textos"
+        },
+        "Attributes": {
+          "id": "Id",
+          "busy": "Ocupado",
+          "visibility": "Visibilidad",
+          "name": "Nombre",
+          "title": "Título",
+          "headerImages": "Imágenes de cabecera",
+          "pano": "Imagen panomármica",
+          "video": "Video",
+          "web": "Sitio web",
+          "comments": "Comentarios",
+          "stars": "Estrellas",
+          "date": "Fecha",
+          "startDate": "Fecha de inicio",
+          "endDate": "Fecha de Culminación",
+          "content": "Contenido",
+          "answered": "Respondidos",
+          "questions": "Preguntas"
+        },
+        "Values": {
+          "true": "Tiene",
+          "false": "No tiene"
+        },
+        "Toolbar": {
+          "Selected": "seleccionadas",
+          "Tooltip": {
+            "Visibility": "Visibilidad",
+            "Edit": "Edit",
+            "Add": "Agregar"
+          }
+        }
+      }
+    },
+    "Errors": {
+      "NotConnected": "No tienes conexión con el servidor",
+      "Empty": "No hay productos",
+      "UsernameTaken": "Nombre de usuario en uso",
+      "SomeWrong": "Ha ocurrido un error",
+      "Wrong": "Usuario o contraseña incorrecta",
+      "UserRequired": "Debes introducir un nombre de usuario",
+      "NameRequired": "Debes introducir un nombre",
+      "TitleRequired": "Debes introducir un título",
+      "CommentRequired": "Debes introducir un comentario",
+      "RoleRequired": "Debes introducir un rol",
+      "PriceRequired": "Debes introducir un precio",
+      "TypeRequired": "Debes introducir un tipo",
+      "DescriptionRequired": "Debes introducir una descripción",
+      "PasswordLengthValidation": "La contraseña debe tener al menos 8 caracteres y no debe pasar de 12 caracteres",
+      "PasswordCharacterValidation": "La contraseña debe tener al menos una letra mayúscula, una minúscula y un número",
+      "PasswordNameValidation": "La contraseña no debe contener el nombre de usuario",
+      "NoEmptyPassword": "La contraseña no puede estar vacía",
+      "DifferentPassword": "Las contraseñas no coinciden",
+      "TextNameTaken": "Ese nombre de texto ya está en uso",
+      "EndDateError": "La fecha final debe ser pasada la inicial"
+    },
+    "Messages": {
+      "BackupRestored": "Se ha restaurado correctamente",
+      "AdminNotified": "Se ha notificado al administrador",
+      "LoginSuccessful": "Inicio de sesión correctamente",
+      "RegisterSuccessful": "Usuario creado correctamente",
+      "SaveSuccessful": "Guardado correctamente",
+      "DeletedSuccessful": "Eliminado correctamente",
+      "NoData": "No hay datos",
+      "Error": "Error al conectar"
+    },
+    "Dashboard": {
+      "NSelected": "seleccionados",
+      "OneSelected": "seleccionado",
+      "Submit": {
+        "Delete": "Eliminar",
+        "Edit": "Modificar",
+        "Show": "Mostrar",
+        "Hide": "Ocultar",
+        "AddComment": "Agregar valoraciones"
+      },
+      "TableAttributes": {
+        "id": "Id",
+        "name": "Nombre",
+        "title": "Título",
+        "subtitle": "Subtítulo",
+        "contact": "Contacto",
+        "lastname": "Apellidos",
+        "content": "Contenido",
+        "comments": "Comentarios",
+        "classification": "Clasificaciones",
+        "email": "Email",
+        "photo": "Foto",
+        "role": "Rol",
+        "status": "Estado",
+        "phone": "Teléfono",
+        "address": "Dirección",
+        "user": "Usuario",
+        "headerImage": "Imagen de cabecera",
+        "headerImages": "Imágenes de cabecera",
+        "description": "Descripción",
+        "pano": "Imagen en 360",
+        "date": "Fecha de creación",
+        "startDate": "Fecha de inicio",
+        "endDate": "Fecha de Culminación",
+        "services": "Servicios",
+        "routes": "Rutas",
+        "places": "Lugares",
+        "placeType": "Tipos del Lugar",
+        "socialMedia": "Redes sociales",
+        "web": "Sitio web",
+        "video": "Video",
+        "visibility": "Visibilidad",
+        "latitude": "Latitud",
+        "longitude": "Longitud"
+      },
+      "TableAttributeTypes": {
+        "id": "number",
+        "name": "string",
+        "title": "string",
+        "subtitle": "string",
+        "contact": "string",
+        "lastname": "string",
+        "content": "string",
+        "comments": "number",
+        "classification": "numbre",
+        "email": "string",
+        "photo": "string",
+        "role": "string",
+        "status": "string",
+        "phone": "string",
+        "address": "string",
+        "user": "string",
+        "headerImage": "string",
+        "headerImages": "number",
+        "description": "string",
+        "pano": "string",
+        "date": "string",
+        "startDate": "string",
+        "endDate": "string",
+        "services": "number",
+        "routes": "number",
+        "places": "number",
+        "placeType": "number",
+        "socialMedia": "number",
+        "web": "string",
+        "video": "string",
+        "visibility": "number",
+        "latitude": "number",
+        "longitude": "number"
+      },
+      "TableValues": {
+        "true": "Tiene",
+        "false": "No tiene"
+      },
+      "Backups": {
+        "Empty": {
+          "Title": "No hay respaldo"
+        },
+        "Title": "Panel de respaldos",
+        "By": "por",
+        "Add": "Programar",
+        "Done": "Realizado",
+        "Pending": "Pendiente",
+        "Download": "Descargar",
+        "Execute": "Ejecutar",
+        "Delete": "Eliminar"
+      },
+      "Translations": {
+        "Empty": {
+          "Title": "No hay traducciones"
+        },
+        "Title": "Panel de traducciones",
+        "Add": "Crear",
+        "Done": "Realizado",
+        "Pending": "Pendiente",
+        "Delete": "Eliminar"
+      },
+      "Places": {
+        "Empty": {
+          "Title": "No hay lugares",
+          "Create": "Crear nuevo lugar"
+        },
+        "Tabs": ["Lista", "Insertar"],
+        "TabsModify": ["Lista", "Modificar"],
+        "FormTabs": ["Generales", "Contenido", "Geolocalización", "Multimedia"],
+        "List": { "Title": "Lista de Lugares" },
+        "Select": "Selecciona el lugar",
+        "Insert": {
+          "Title": "Insertar nuevo lugar",
+          "Inputs": {
+            "Name": {
+              "Label": "Nombre",
+              "Placeholder": "ej: Casitllo del Jigüey"
+            },
+            "Description": {
+              "Label": "Description",
+              "Placeholder": "Alguna descripción"
+            },
+            "Phone": {
+              "Label": "Teléfono",
+              "Placeholder": "+53 55889900"
+            },
+            "Web": {
+              "Label": "Sitio web",
+              "Placeholder": "ej: https://www.casitillo.com"
+            },
+            "Video": {
+              "Label": "Video",
+              "Placeholder": "ej: https://www.casitillo.com"
+            },
+            "SocialMedia": {
+              "Label": "Redes sociales",
+              "Placeholder": "ej: https://www.facebook.com/casitillo"
+            },
+            "Services": {
+              "Label": "Servicios",
+              "Placeholder": "ej: Billar"
+            },
+            "Routes": {
+              "Label": "Rutas",
+              "Placeholder": "ej: Ruta de la Fundación"
+            },
+            "PlaceTypes": {
+              "Label": "Tipos del lugar",
+              "Placeholder": "ej: Popular"
+            },
+            "PanoImage": {
+              "Label": "Imagen panorámica"
+            },
+            "HeaderImages": {
+              "Label": "Imágenes de cabecera"
+            }
+          }
+        },
+        "Modify": {
+          "Title": "Modificar lugar"
+        }
+      },
+      "Routes": {
+        "Empty": {
+          "Title": "No hay rutas",
+          "Create": "Crear nueva ruta"
+        },
+        "Tabs": ["Lista", "Insertar"],
+        "TabsModify": ["Lista", "Modificar"],
+        "FormTabs": ["Generales", "Contenido", "Multimedia"],
+        "List": { "Title": "Lista de Rutas" },
+        "Select": "Selecciona la ruta",
+        "Insert": {
+          "Title": "Insertar nueva ruta",
+          "Inputs": {
+            "Name": {
+              "Label": "Nombre",
+              "Placeholder": "ej: Ruta de la Fundación"
+            },
+            "Description": {
+              "Label": "Description",
+              "Placeholder": "Alguna descripción"
+            },
+            "Web": {
+              "Label": "Sitio web",
+              "Placeholder": "ej: https://www.casitillo.com"
+            },
+            "Video": {
+              "Label": "Video",
+              "Placeholder": "ej: https://www.casitillo.com"
+            },
+            "Places": {
+              "Label": "Lugares",
+              "Placeholder": "ej: Casitllo del Jigüey"
+            },
+            "Activities": {
+              "Label": "Actividades",
+              "Placeholder": "ej: Paseo a caballo"
+            },
+            "HeaderImages": {
+              "Label": "Imágenes de cabecera"
+            },
+            "PanoImage": {
+              "Label": "Imagen panorámica"
+            }
+          }
+        },
+        "Modify": {
+          "Title": "Modificar ruta"
+        }
+      },
+      "PlaceTypes": {
+        "Empty": {
+          "Title": "No hay tipos de lugares",
+          "Create": "Crear nuevo tipo de lugar"
+        },
+        "Tabs": ["Lista", "Insertar"],
+        "TabsModify": ["Lista", "Modificar"],
+        "FormTabs": ["Generales"],
+        "List": { "Title": "Lista de Tipos de Lugares" },
+        "Select": "Selecciona el tipo de lugar",
+        "Insert": {
+          "Title": "Insertar nuevo tipo de lugar",
+          "Inputs": {
+            "Classifications": {
+              "Label": "Clasificaciones",
+              "Placeholder": "ej:Experiencia",
+              "Values": ["Experiencia", "Donde comer", "Donde dormir"]
+            },
+            "Name": {
+              "Label": "Nombre",
+              "Placeholder": "ej: Bar"
+            },
+            "Places": {
+              "Label": "Lugares",
+              "Placeholder": "ej: Casitllo del Jigüey"
+            }
+          }
+        },
+        "Modify": {
+          "Title": "Modificar tipo de lugar"
+        }
+      },
+      "News": {
+        "Empty": {
+          "Title": "No hay noticias",
+          "Create": "Crear nueva noticia"
+        },
+        "Tabs": ["Lista", "Insertar"],
+        "TabsModify": ["Lista", "Modificar"],
+        "FormTabs": ["Generales", "Contenido", "Multimedia"],
+        "List": { "Title": "Lista de Noticias" },
+        "Select": "Selecciona la noticia",
+        "Insert": {
+          "Title": "Insertar nueva noticia",
+          "Inputs": {
+            "Title": {
+              "Label": "Título",
+              "Placeholder": "ej: Nueva publicación en Santa Ifigenia!"
+            },
+            "Subtitle": {
+              "Label": "Subtítulo",
+              "Placeholder": "ej: Publicada el 22 de diciembre de 2022"
+            },
+            "HeaderImage": {
+              "Label": "Imagen de cabecera"
+            }
+          }
+        },
+        "Modify": {
+          "Title": "Modificar noticia"
+        }
+      },
+      "Events": {
+        "Empty": {
+          "Title": "No hay eventos",
+          "Create": "Crear nuevo evento"
+        },
+        "Tabs": ["Lista", "Insertar"],
+        "TabsModify": ["Lista", "Modificar"],
+        "FormTabs": ["Generales", "Contenido", "Geolocalización", "Multimedia"],
+        "List": { "Title": "Lista de Eventos" },
+        "Select": "Selecciona la eventos",
+        "Insert": {
+          "Title": "Insertar nuevo eventos",
+          "Inputs": {
+            "Title": {
+              "Label": "Título",
+              "Placeholder": "ej: Nueva publicación en Santa Ifigenia!"
+            },
+            "Subtitle": {
+              "Label": "Subtítulo",
+              "Placeholder": "ej: Publicada el 22 de diciembre de 2022"
+            },
+            "StartDate": {
+              "Label": "Fecha de inicio"
+            },
+            "EndDate": {
+              "Label": "Fecha de culminación"
+            },
+            "Address": {
+              "Label": "Dirección",
+              "Placeholder": "ej: Calle #2 // Calle 3 y Calle 5"
+            },
+            "HeaderImage": {
+              "Label": "Imagen de cabecera"
+            }
+          }
+        },
+        "Modify": {
+          "Title": "Modificar evento"
+        }
+      },
+      "Texts": {
+        "Empty": {
+          "Title": "No hay texts",
+          "Create": "Crear nuevo texto"
+        },
+        "Tabs": ["Lista", "Insertar"],
+        "TabsModify": ["Lista", "Modificar"],
+        "List": { "Title": "Lista de Textos" },
+        "Select": "Selecciona el texto",
+        "Insert": {
+          "Title": "Insertar nuevo texto",
+          "Inputs": {
+            "Name": {
+              "Label": "Nombre",
+              "Placeholder": "ej: Acerca de Santa Ifigenia"
+            }
+          }
+        },
+        "Modify": {
+          "Title": "Modificar texto"
+        }
+      },
+      "Surveys": {
+        "Empty": {
+          "Title": "No hay formularios",
+          "Create": "Crear nuevo formulario"
+        },
+        "Tabs": ["Lista", "Insertar"],
+        "TabsModify": ["Lista", "Modificar"],
+        "List": { "Title": "Lista de Formularios" },
+        "Select": "Selecciona el formulario",
+        "Insert": {
+          "Title": "Insertar nuevo formulario",
+          "Inputs": {
+            "Title": {
+              "Label": "Título",
+              "Placeholder": "ej: Santa Ifigenia Inspira"
+            }
+          }
+        },
+        "Modify": {
+          "Title": "Modificar formulario"
+        }
+      },
+      "Users": {
+        "Empty": {
+          "Title": "No hay usuarios",
+          "Create": "Crear nuevo usuario"
+        },
+        "Tabs": ["Lista", "Insertar", "Modificar", "Eliminar"],
+        "List": { "Title": "Lista de Usuarios" },
+        "Select": "Selecciona el usuario",
+        "Insert": {
+          "Title": "Insertar nuevo usuario",
+          "Inputs": {
+            "Name": {
+              "Label": "Nombre",
+              "Placeholder": "ej: Jorge"
+            },
+            "Email": {
+              "Label": "Correo",
+              "Placeholder": "ej: jorge@email.com"
+            },
+            "Role": {
+              "Label": "Rol",
+              "Placeholder": "ej: desarrollador"
+            }
+          }
+        },
+        "Modify": {
+          "Title": "Modificar usuario"
+        },
+        "Delete": {
+          "Title": "Eliminar usuario"
+        }
+      },
+      "Reviews": {
+        "Empty": {
+          "Title": "No hay comentarios"
+        },
+        "EmptyReviews": "No hay comentarios...",
+        "Title": "Commentarios",
+        "Place": "(Lugar)",
+        "Route": "(Ruta)",
+        "News": "(Noticia)",
+        "Event": "(Evento)",
+        "Placeholder": "Algún comentario",
+        "Label": "Comentario",
+        "Stars": "Estrellas",
+        "StarsValues": ["Insuficiente", "Pobre", "Medio", "Bueno", "Excelente"]
+      },
+      "Campaigns": {
+        "Empty": {
+          "Title": "No hay campañas",
+          "Create": "Crear nueva campaña"
+        },
+        "Tabs": ["Lista", "Insertar"],
+        "TabsModify": ["Lista", "Modificar"],
+        "List": { "Title": "Lista de Campaña" },
+        "Select": "Selecciona la campaña",
+        "Insert": {
+          "Title": "Insertar nuevo campaña",
+          "Inputs": {
+            "Name": {
+              "Label": "Nombre",
+              "Placeholder": "ej: ¿Descubre o Visita? ¿Cúal atrae más a los clientes?"
+            }
+          }
+        },
+        "Modify": {
+          "Title": "Modificar campaña"
+        }
+      },
+      "Inputs": {
+        "Web": "Página Web",
+        "Android": "Aplicación Android",
+        "Month": "x Mes",
+        "Year": "x Año"
+      },
+      "Titles": {
+        "appOpenMonth": "Aplicación Abierta por mes",
+        "appOpenYear": "Aplicación Abierta por año",
+        "screenView": "Interacción con páginas"
+      },
+      "Values": {
+        "count": "Cantidad"
+      },
+      "Months": [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Noviembre",
+        "Diciembre"
+      ],
+      "ReduxMonth": [
+        "Ene",
+        "Feb",
+        "Mar",
+        "Abr",
+        "May",
+        "Jun",
+        "Jul",
+        "Ago",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      "Tabs": { "appOpen": "Apertura", "screenView": "Interacción" },
+      "Labels": {
+        "androidApp": "Android",
+        "webApp": "Web",
+        "screenView": "Páginas",
+        "stars": "Estrellas",
+        "clicks": "Clicks",
+        "entireView": "Revisada completa",
+        "shared": "Compartida"
+      }
+    }
+  }
+}
