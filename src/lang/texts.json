@@ -5,6 +5,17 @@
       "Body": "El URL solicitado no fue encontrado",
       "Button": "Regresar al inicio"
     },
+    "Navbar": {
+      "Search": {
+        "Placeholder": "Buscar..."
+      }
+    },
+    "Home": {
+      "Hero": {},
+      "AreaTab": {
+        "Tabs": ["Tumbas", "Rutas", "Noticias", "Eventos"]
+      }
+    },
     "Map": {
       "Title": "Mapa",
       "Inputs": {
