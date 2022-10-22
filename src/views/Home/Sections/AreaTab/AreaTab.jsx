@@ -18,7 +18,10 @@ import { useLanguage } from "../../../../context/LanguageProvider";
 import Card from "../../../../components/Card/Card";
 
 // tabs
+import News from "./Tabs/News/News";
 import Graves from "./Tabs/Graves/Graves";
+import Routes from "./Tabs/Routes/Routes";
+import Events from "./Tabs/Events/Events";
 
 const AreaTab = () => {
   const { languageState } = useLanguage();
@@ -39,7 +42,7 @@ const AreaTab = () => {
           div: { justifyContent: "center" },
           a: { flex: 1, fontWeight: "bold" },
         }}
-        content={[<Graves />, <Card />, <Card />, <Card />]}
+        content={[<Graves />, <Routes />, <News />, <Events />]}
       />
     </Box>
   );
