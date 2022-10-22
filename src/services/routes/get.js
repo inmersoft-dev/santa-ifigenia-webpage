@@ -1,48 +1,41 @@
-/* eslint-disable import/prefer-default-export */
+// @ts-check
 import axios from "axios";
-import { getAuth } from "auth/auth";
-import config from "config";
 
-// cookies
-import { getCookie } from "utils/auth";
+import { getAuth } from "../../auth/auth";
+
+import config from "../../config";
 
 // parsers
 import { parseQueryParameters } from "../../utils/parsers";
 
 /**
  *
- * @param {number} id
+ * @param {object} options
  * @returns
  */
 export const routeList = async (
-  page,
-  count,
-  reduced,
-  places,
-  id,
-  date,
-  title,
-  subtitle,
-  average
+  options = {
+    page: 1,
+    count: 10,
+    reduced: false,
+    places: false,
+    id: undefined,
+    date: undefined,
+    title: undefined,
+    subtitle: undefined,
+    average: undefined,
+  }
 ) => {
   let response;
   try {
     response = await axios.get(
+      // @ts-ignore
       `${config.apiUrl}route/list${parseQueryParameters({
-        page,
-        count,
-        reduced,
-        places,
-        id,
-        date,
-        title,
-        subtitle,
-        average,
+        ...options,
       })}`,
       {
         headers: {
           ...getAuth,
-          Authorization: `Bearer ${getCookie(config.basicKey)}`,
         },
       }
     );
