@@ -5,6 +5,7 @@ import TabView from "sito-mui-tab-view";
 import { Box, Divider } from "@mui/material";
 
 // @mui/icons-material
+import MapIcon from "@mui/icons-material/Map";
 import RouteIcon from "@mui/icons-material/Route";
 import EventIcon from "@mui/icons-material/Event";
 import DoorBackIcon from "@mui/icons-material/DoorBack";
@@ -15,6 +16,9 @@ import { useLanguage } from "../../../../context/LanguageProvider";
 
 // own components
 import Card from "../../../../components/Card/Card";
+
+// tabs
+import Graves from "./Tabs/Graves/Graves";
 
 const AreaTab = () => {
   const { languageState } = useLanguage();
@@ -29,24 +33,13 @@ const AreaTab = () => {
           <RouteIcon />,
           <NewspaperIcon />,
           <EventIcon />,
+          <MapIcon />,
         ]}
         tabsSx={{
           div: { justifyContent: "center" },
           a: { flex: 1, fontWeight: "bold" },
         }}
-        content={[
-          <Box display="flex" sx={{ gap: "20px", flexWrap: "wrap" }}>
-            <Card delay="0.4s" />
-            <Card delay="0.5s" />
-            <Card delay="0.6s" />
-            <Card delay="0.7s" />
-            <Card delay="0.8s" />
-            <Card delay="0.9s" />
-          </Box>,
-          <Card />,
-          <Card />,
-          <Card />,
-        ]}
+        content={[<Graves />, <Card />, <Card />, <Card />]}
       />
     </Box>
   );
