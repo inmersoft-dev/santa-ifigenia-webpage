@@ -91,7 +91,7 @@ const Navbar = () => {
               {languageState.texts.General.Company}
             </Typography>
           </Link>
-          <Box sx={{ display: { md: "inherit", xs: "none" } }}>
+          <Box sx={{ opacity: { md: 1, xs: 0 } }}>
             {languageState.texts.Navbar.Links.map((item) => (
               <Link
                 className={css({

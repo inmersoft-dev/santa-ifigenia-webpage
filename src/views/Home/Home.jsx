@@ -6,14 +6,20 @@ import Navbar from "../../components/Navbar/Navbar";
 
 // sections
 import Hero from "./Sections/Hero/Hero";
-import AreaTab from "./Sections/AreaTab/AreaTab";
+import News from "./Sections/News/News";
+import Graves from "./Sections/Graves/Graves";
+import Routes from "./Sections/Routes/Routes";
+import Events from "./Sections/Events/Events";
 
 const Home = () => {
   return (
     <Box sx={{ minWidth: "100%", minHeight: "100vh" }}>
       <Navbar />
       <Hero />
-      <AreaTab />
+      <Graves />
+      <Routes />
+      <News />
+      <Events />
     </Box>
   );
 };

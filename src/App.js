@@ -22,7 +22,9 @@ import View from "./layouts/View/View";
 
 // views
 import Home from "./views/Home/Home";
+import VisitUs from "./views/VisitUs/VisitUs";
 import NotFound from "./views/NotFound/NotFound";
+import Discover from "./views/Discover/Discover";
 
 const App = () => {
   useEffect(() => {
@@ -39,6 +41,8 @@ const App = () => {
             <Routes>
               <Route exact path="/" element={<View />}>
                 <Route index element={<Home />} />
+                <Route exact path="/visit-us" element={<VisitUs />} />
+                <Route exact path="/discover" element={<Discover />} />
               </Route>
               <Route path="*" element={<NotFound />} />
             </Routes>
