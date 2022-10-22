@@ -21,6 +21,7 @@ import { useLanguage } from "../../context/LanguageProvider";
 
 // @emotion/css
 import { css } from "@emotion/css";
+import Drawer from "../Drawer/Drawer";
 
 const Navbar = () => {
   const { languageState } = useLanguage();
@@ -42,23 +43,32 @@ const Navbar = () => {
     };
   }, [onScroll]);
 
+  const [showDrawer, setShowDrawer] = useState();
+  const closeDrawer = () => setShowDrawer(false);
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, height: "75px !important" }}>
+      <Drawer visible={showDrawer} handleClose={closeDrawer} />
       <AppBar
         position="fixed"
         sx={{
+          height: "75px !important",
           boxShadow: "none",
           transition: "background-color 500ms ease",
           backgroundColor: !scroll ? "white" : theme.palette.primary.main,
         }}
       >
-        <Toolbar sx={{ justifyContent: "space-between" }}>
+        <Toolbar
+          sx={{ justifyContent: "space-between", height: "75px !important" }}
+        >
           <IconButton
             size="large"
             edge="start"
             aria-label="menu"
+            onClick={() => setShowDrawer(true)}
             sx={{
               mr: 2,
+              minHeight: "64px",
               color: !scroll ? theme.palette.primary.main : "aliceblue",
             }}
           >
@@ -72,6 +82,7 @@ const Navbar = () => {
             <Typography
               variant="h6"
               sx={{
+                fontWeight: "bold",
                 color: !scroll ? theme.palette.primary.main : "inherit",
               }}
             >
@@ -89,6 +100,7 @@ const Navbar = () => {
                 to={item.Link}
               >
                 <Button
+                  size="large"
                   sx={{
                     fontWeight: "bold",
                     color: !scroll ? theme.palette.primary.main : "aliceblue",

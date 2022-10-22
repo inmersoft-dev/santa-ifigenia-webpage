@@ -1364,6 +1364,11 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fontsource/libre-baskerville@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/libre-baskerville/-/libre-baskerville-4.5.10.tgz#31a22c5dd38bb70d024ce8c10ab236d68f16a42e"
+  integrity sha512-7dp2TxBSVlINiYe7LEuV/VojQij5oBSRIeS+/mOlCRXRyEKiEvK1y7sH8GlORqGxXYDKCDWtQaiCu1XPNchIKg==
+
 "@fontsource/roboto-slab@^4.5.9":
   version "4.5.9"
   resolved "https://registry.yarnpkg.com/@fontsource/roboto-slab/-/roboto-slab-4.5.9.tgz#4e24dfb20c4ab89c3cb9c43ff736c4bb4e623a85"

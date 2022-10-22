@@ -13,10 +13,12 @@
         {
           "Link": "/search",
           "Label": "Buscar"
-        },
+        }
+      ],
+      "DrawerLinks": [
         {
-          "Link": "/discover",
-          "Label": "Descubre"
+          "Link": "/search",
+          "Label": "Buscar"
         }
       ]
     },
