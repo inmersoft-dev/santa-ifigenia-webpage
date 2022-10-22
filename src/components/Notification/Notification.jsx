@@ -8,11 +8,10 @@ import { useState, useEffect } from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
 
 // mui components
-import { Snackbar } from "@mui/material/";
-import MuiAlert from "@mui/material/Alert";
+import { Snackbar, Alert as MUIAlert } from "@mui/material/";
 
 // contexts
-import { useNotification } from "context/NotificationProvider";
+import { useNotification } from "../../context/NotificationProvider";
 
 const Notification = () => {
   const { notificationState } = useNotification();
@@ -34,14 +33,18 @@ const Notification = () => {
   return (
     <div ref={ref}>
       <Snackbar open={open} autoHideDuration={99000} onClose={handleClose}>
-        <MuiAlert
+        <MUIAlert
           variant="filled"
           onClose={handleClose}
           severity={notificationState.type}
-          style={{ opacity: open ? 1 : 0, zIndex: open ? 98 : -1, minWidth: 250 }}
+          style={{
+            opacity: open ? 1 : 0,
+            zIndex: open ? 98 : -1,
+            minWidth: 250,
+          }}
         >
           {notificationState.message}
-        </MuiAlert>
+        </MUIAlert>
       </Snackbar>
     </div>
   );

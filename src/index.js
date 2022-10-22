@@ -3,9 +3,8 @@ import "@fontsource/roboto";
 import "@fontsource/roboto-slab";
 
 // context
-import { ModeProvider } from "context/ModeProvider";
-import { LanguageProvider } from "context/LanguageProvider";
-import { NotificationProvider } from "context/NotificationProvider";
+import { LanguageProvider } from "./context/LanguageProvider";
+import { NotificationProvider } from "./context/NotificationProvider";
 
 // styles
 import "./index.css";
@@ -22,10 +21,8 @@ const root = ReactDOMClient.createRoot(container);
 
 root.render(
   <LanguageProvider>
-    <ModeProvider>
-      <NotificationProvider>
-        <App />
-      </NotificationProvider>
-    </ModeProvider>
+    <NotificationProvider>
+      <App />
+    </NotificationProvider>
   </LanguageProvider>
 );

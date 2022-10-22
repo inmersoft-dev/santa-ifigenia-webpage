@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 // @mui components
 import { Box, useTheme } from "@mui/material";
 
-// @mui icons
+// @mui/icons-material
 import LoopIcon from "@mui/icons-material/Loop";
 
 const Loading = (props) => {

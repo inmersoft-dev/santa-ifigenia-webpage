@@ -2,17 +2,17 @@
 /* eslint-disable react/function-component-definition */
 import PropTypes from "prop-types";
 
-// @mui icons
-import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
-
-// @mui components
-import { useTheme, Typography, Button } from "@mui/material";
-
 // sito components
 import SitoContainer from "sito-container";
 
+// @mui/icons-material
+import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
+
+// @mui/material
+import { useTheme, Typography, Button } from "@mui/material";
+
 // contexts
-import { useLanguage } from "context/LanguageProvider";
+import { useLanguage } from "../../context/LanguageProvider";
 
 const Empty = (props) => {
   const theme = useTheme();
@@ -30,7 +30,12 @@ const Empty = (props) => {
         {title || languageState.texts.Messages.NoData}
       </Typography>
       {onAction && (
-        <Button type="submit" onClick={onAction} variant="contained" sx={{ marginTop: "10px" }}>
+        <Button
+          type="submit"
+          onClick={onAction}
+          variant="contained"
+          sx={{ marginTop: "10px" }}
+        >
           {button || languageState.texts.Details.Buttons.Insert}
         </Button>
       )}
