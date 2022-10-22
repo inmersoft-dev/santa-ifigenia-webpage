@@ -42,7 +42,7 @@ const Card = (props) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         flex: { md: 1, xs: "inherit" },
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(${image === null ? defaultTomb : image})`,
         minWidth: { md: "450px", xs: "340px" },
         opacity: isInView ? 1 : 0,
         transition: `all 0.1s linear ${delay}`,
