@@ -1,5 +1,6 @@
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/function-component-definition */
+import { forwardRef } from "react";
 
 // prop-types
 import PropTypes from "prop-types";
@@ -7,15 +8,13 @@ import PropTypes from "prop-types";
 // @mui components
 import { Box, useTheme, CircularProgress } from "@mui/material";
 
-// @mui/icons-material
-import LoopIcon from "@mui/icons-material/Loop";
-
-const Loading = (props) => {
+const Loading = forwardRef((props, ref) => {
   const theme = useTheme();
-  const { sx, visible, fontSize, background } = props;
+  const { sx, visible, background } = props;
 
   return (
     <Box
+      ref={ref}
       sx={{
         opacity: visible ? 1 : 0,
         zIndex: visible ? 99 : -1,
@@ -37,7 +36,7 @@ const Loading = (props) => {
       <CircularProgress />
     </Box>
   );
-};
+});
 
 Loading.defaultProps = {
   sx: {},
