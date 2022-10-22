@@ -1,0 +1,1 @@
+import CookieIcon from '@mui/icons-material/Cookie';

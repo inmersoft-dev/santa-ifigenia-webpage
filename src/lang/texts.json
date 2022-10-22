@@ -8,13 +8,26 @@
     "Navbar": {
       "Search": {
         "Placeholder": "Buscar..."
-      }
+      },
+      "Links": [
+        {
+          "Link": "/search",
+          "Label": "Buscar"
+        },
+        {
+          "Link": "/discover",
+          "Label": "Descubre"
+        }
+      ]
     },
     "Home": {
       "Hero": {},
       "AreaTab": {
         "Tabs": ["Tumbas", "Rutas", "Noticias", "Eventos"]
       }
+    },
+    "Card": {
+      "SeeMore": "Ver más"
     },
     "Map": {
       "Title": "Mapa",

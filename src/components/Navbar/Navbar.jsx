@@ -1,98 +1,106 @@
-import * as React from "react";
-
-// @mui/material/styles
-import { styled, alpha } from "@mui/material/styles";
+import { useState, useCallback, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // @mui/material
 import {
+  useTheme,
   AppBar,
   Box,
   Toolbar,
   Typography,
-  InputBase,
   IconButton,
+  Button,
+  Divider,
 } from "@mui/material/";
 
 // @mui/icons-material
 import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 
 // context
 import { useLanguage } from "../../context/LanguageProvider";
 
+// @emotion/css
+import { css } from "@emotion/css";
+
 const Navbar = () => {
   const { languageState } = useLanguage();
 
-  const Search = styled("div")(({ theme }) => ({
-    position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    "&:hover": {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginLeft: 0,
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(1),
-      width: "auto",
-    },
-  }));
+  const theme = useTheme();
 
-  const SearchIconWrapper = styled("div")(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }));
+  const [scroll, setScroll] = useState(false);
 
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: "inherit",
-    "& .MuiInputBase-input": {
-      padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create("width"),
-      width: "100%",
-      [theme.breakpoints.up("sm")]: {
-        width: "12ch",
-        "&:focus": {
-          width: "20ch",
-        },
-      },
-    },
-  }));
+  const onScroll = useCallback(() => {
+    const top = window.pageYOffset || document.documentElement.scrollTop;
+    if (top > 65) setScroll(true);
+    else setScroll(false);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [onScroll]);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar
+        position="fixed"
+        sx={{
+          boxShadow: "none",
+          transition: "background-color 500ms ease",
+          backgroundColor: !scroll ? "white" : theme.palette.primary.main,
+        }}
+      >
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <IconButton
             size="large"
             edge="start"
-            color="inherit"
             aria-label="menu"
-            sx={{ mr: 2, display: { md: "none", xs: "inherit" } }}
+            sx={{
+              mr: 2,
+              color: !scroll ? theme.palette.primary.main : "aliceblue",
+            }}
           >
             <MenuIcon />
+            <MenuIcon sx={{ marginLeft: "-6px" }} />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            {languageState.texts.General.Company}
-          </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder={languageState.texts.Navbar.Search.Placeholder}
-              inputProps={{
-                "aria-label": languageState.texts.Navbar.Search.Placeholder,
+          <Link
+            className={css({ textDecoration: "none", color: "inherit" })}
+            to="/"
+          >
+            <Typography
+              variant="h6"
+              sx={{
+                color: !scroll ? theme.palette.primary.main : "inherit",
               }}
-            />
-          </Search>
+            >
+              {languageState.texts.General.Company}
+            </Typography>
+          </Link>
+          <Box sx={{ display: { md: "inherit", xs: "none" } }}>
+            {languageState.texts.Navbar.Links.map((item) => (
+              <Link
+                className={css({
+                  textDecoration: "none",
+                  color: !scroll ? theme.palette.primary.main : "aliceblue",
+                })}
+                key={item.Label}
+                to={item.Link}
+              >
+                <Button
+                  sx={{
+                    fontWeight: "bold",
+                    color: !scroll ? theme.palette.primary.main : "aliceblue",
+                  }}
+                >
+                  {item.Label}
+                </Button>
+              </Link>
+            ))}
+          </Box>
         </Toolbar>
+        <Divider />
       </AppBar>
     </Box>
   );
