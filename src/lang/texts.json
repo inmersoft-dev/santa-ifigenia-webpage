@@ -28,23 +28,40 @@
         "Title": "Mantente actualizado"
       },
       "Events": {
-        "Title": "Últimos eventos"
+        "Title": "Festivales y eventos",
+        "Body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptates itaque esse iusto animi explicabo consectetur culpa saepe cupiditate ut facere incidunt aut minus ducimus tempora excepturi ullam doloremque voluptate!"
       }
     },
     "Navbar": {
       "Search": {
         "Placeholder": "Buscar..."
       },
+      "Left": {
+        "Link": "/search",
+        "Label": "Buscar"
+      },
       "Links": [
         {
-          "Link": "/search",
-          "Label": "Buscar"
+          "Link": "/visit-us",
+          "Label": "Visítanos"
+        },
+        {
+          "Link": "/discover",
+          "Label": "Descubre"
         }
       ],
       "DrawerLinks": [
         {
           "Link": "/search",
           "Label": "Buscar"
+        },
+        {
+          "Link": "/visit-us",
+          "Label": "Visítanos"
+        },
+        {
+          "Link": "/discover",
+          "Label": "Descubre"
         }
       ]
     },

@@ -63,20 +63,40 @@ const Navbar = () => {
         <Toolbar
           sx={{ justifyContent: "space-between", height: "75px !important" }}
         >
-          <IconButton
-            size="large"
-            edge="start"
-            aria-label="menu"
-            onClick={() => setShowDrawer(true)}
-            sx={{
-              mr: 2,
-              minHeight: "64px",
-              color: !scroll ? theme.palette.primary.main : "aliceblue",
-            }}
-          >
-            <MenuIcon />
-            <MenuIcon sx={{ marginLeft: "-6px" }} />
-          </IconButton>
+          <Box>
+            <IconButton
+              size="large"
+              edge="start"
+              aria-label="menu"
+              onClick={() => setShowDrawer(true)}
+              sx={{
+                mr: 2,
+                minHeight: "64px",
+                color: !scroll ? theme.palette.primary.main : "aliceblue",
+              }}
+            >
+              <MenuIcon />
+              <MenuIcon sx={{ marginLeft: "-6px" }} />
+            </IconButton>
+            <Link
+              className={css({
+                textDecoration: "none",
+                color: !scroll ? theme.palette.primary.main : "aliceblue",
+              })}
+              key={languageState.texts.Navbar.Left.Label}
+              to={languageState.texts.Navbar.Left.Link}
+            >
+              <Button
+                size="large"
+                sx={{
+                  fontWeight: "bold",
+                  color: !scroll ? theme.palette.primary.main : "aliceblue",
+                }}
+              >
+                {languageState.texts.Navbar.Left.Label}
+              </Button>
+            </Link>
+          </Box>
           <Link
             className={css({ textDecoration: "none", color: "inherit" })}
             to="/"

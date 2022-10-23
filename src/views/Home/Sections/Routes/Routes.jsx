@@ -47,8 +47,12 @@ const Routes = () => {
       if (response.status === 200) {
         const { list } = response;
         setRoutes(list);
-      } else showNotification("error", String(response.error));
+      } else {
+        setRoutes(-1);
+        showNotification("error", String(response.error));
+      }
     } catch (err) {
+      setRoutes(-1);
       showNotification("error", String(err));
     }
     setLoading(false);

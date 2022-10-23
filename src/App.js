@@ -22,6 +22,7 @@ import View from "./layouts/View/View";
 
 // views
 import Home from "./views/Home/Home";
+import Details from "./views/Details/Details";
 import VisitUs from "./views/VisitUs/VisitUs";
 import NotFound from "./views/NotFound/NotFound";
 import Discover from "./views/Discover/Discover";
@@ -41,6 +42,7 @@ const App = () => {
             <Routes>
               <Route exact path="/" element={<View />}>
                 <Route index element={<Home />} />
+                <Route exact path="/details" element={<Details />} />
                 <Route exact path="/visit-us" element={<VisitUs />} />
                 <Route exact path="/discover" element={<Discover />} />
               </Route>

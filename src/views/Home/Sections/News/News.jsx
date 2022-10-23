@@ -47,9 +47,12 @@ const News = () => {
         const { list } = response;
         console.log("news", list);
         setNews(list);
-      } else showNotification("error", String(response.error));
+      } else {
+        setNews(-1);
+        showNotification("error", String(response.error));
+      }
     } catch (err) {
-      console.log(err);
+      setNews(-1);
       showNotification("error", String(err));
     }
     setLoading(false);

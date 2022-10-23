@@ -38,8 +38,12 @@ const Graves = () => {
       if (response.status === 200) {
         const { list } = response;
         setGraves(list);
-      } else showNotification("error", String(response.error));
+      } else {
+        setGraves(-1);
+        showNotification("error", String(response.error));
+      }
     } catch (err) {
+      setGraves(-1);
       showNotification("error", String(err));
     }
     setLoading(false);

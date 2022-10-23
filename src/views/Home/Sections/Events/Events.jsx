@@ -47,9 +47,12 @@ const Events = () => {
         const { list } = response;
         console.log("events", list);
         setEvents(list);
-      } else showNotification("error", String(response.error));
+      } else {
+        setEvents(-1);
+        showNotification("error", String(response.error));
+      }
     } catch (err) {
-      console.log(err);
+      setEvents(-1);
       showNotification("error", String(err));
     }
     setLoading(false);
@@ -93,6 +96,19 @@ const Events = () => {
             sx={{ color: theme.palette.secondary.light }}
           >
             {languageState.texts.Sections.Events.Title}
+          </Typography>
+        </InViewComponent>
+        <InViewComponent delay="0.2s" sx={{ justifyContent: "center" }}>
+          <Typography
+            variant="body1"
+            sx={{
+              width: "50%",
+              marginTop: "40px",
+              textAlign: "center",
+              color: theme.palette.secondary.light,
+            }}
+          >
+            {languageState.texts.Sections.Events.Body}
           </Typography>
         </InViewComponent>
         {!loading && events !== -1 && (
