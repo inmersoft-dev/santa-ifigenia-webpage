@@ -1,21 +1,24 @@
 import { useEffect, useState } from "react";
 
 // @mui/material
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 // own components
 import Card from "../../../../components/Card/Card";
 import Empty from "../../../../components/Empty/Empty";
 import Error from "../../../../components/Error/Error";
 import Loading from "../../../../components/Loading/Loading";
+import InViewComponent from "../../../../components/InViewComponent/InViewComponent";
 
 // services
 import { graveList } from "../../../../services/graves/get";
 
 // context
+import { useLanguage } from "../../../../context/LanguageProvider";
 import { useNotification } from "../../../../context/NotificationProvider";
 
 const Graves = () => {
+  const { languageState } = useLanguage();
   const { setNotificationState } = useNotification();
 
   const [loading, setLoading] = useState(true);
@@ -34,7 +37,6 @@ const Graves = () => {
       const response = await graveList({ count: 3, page: 1, reduced: true });
       if (response.status === 200) {
         const { list } = response;
-        console.log(list);
         setGraves(list);
       } else showNotification("error", String(response.error));
     } catch (err) {
@@ -50,25 +52,42 @@ const Graves = () => {
   return (
     <Box
       sx={{
-        gap: "20px",
         display: "flex",
         minWidth: "100%",
-        flexWrap: "wrap",
-        minHeight: "70vh",
+        minHeight: "100vh",
+        alignItems: "center",
         position: "relative",
+        flexDirection: "column",
+        justifyContent: "center",
       }}
     >
-      {graves !== -1 &&
-        graves.map((item, i) => (
-          <Card
-            id={item.id}
-            key={item.id}
-            title={item.title}
-            subtitle={item.subtitle}
-            image={item.headerImages[0]}
-            delay={`0.${i + 3}s`}
-          />
-        ))}
+      <InViewComponent>
+        <Typography variant="h2" sx={{ marginBottom: "40px" }}>
+          {languageState.texts.Sections.Graves.Title}
+        </Typography>
+      </InViewComponent>
+      <Box
+        sx={{
+          gap: "20px",
+          display: "flex",
+          position: "relative",
+          justifyContent: "center",
+        }}
+      >
+        {graves !== -1 &&
+          graves.map((item, i) => (
+            <Card
+              id={item.id}
+              key={item.id}
+              title={item.title}
+              subtitle={item.subtitle}
+              image={item.headerImages[0]}
+              delay={`0.${i + 3}s`}
+              limit={60}
+              sx={{ width: { md: "450px", xs: "340px" }, flex: "inherit" }}
+            />
+          ))}
+      </Box>
       <Loading visible={loading} />
       {graves !== -1 && !graves.length && <Empty />}
       {graves === -1 && <Error onAction={fetch} />}

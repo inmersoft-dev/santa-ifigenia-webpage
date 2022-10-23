@@ -12,6 +12,22 @@
       "Body": "Ha ocurrido un error",
       "Button": "Reintentar"
     },
+    "Sections": {
+      "Graves": {
+        "Title": "Tumbas más antiguas"
+      },
+      "Routes": {
+        "Title": "Rutas más visitadas Rutas más visitadas",
+        "Content": {
+          "Title": "Visítanos ya!",
+          "Body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptates itaque esse iusto animi explicabo consectetur culpa saepe cupiditate ut facere incidunt aut minus ducimus tempora excepturi ullam doloremque voluptate!",
+          "Button": "Leer más"
+        }
+      },
+      "News": {
+        "Title": "Mantente actualizado"
+      }
+    },
     "Navbar": {
       "Search": {
         "Placeholder": "Buscar..."

@@ -1,0 +1,14 @@
+.marquee {
+  width: 100%;
+  display: flex;
+  animation: scrolling 25s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(-116%);
+  }
+}
