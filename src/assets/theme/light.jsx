@@ -6,16 +6,16 @@ const light = createTheme({
   palette: {
     type: "light",
     primary: {
-      main: "#303342",
-      light: "#595b67",
-      dark: "#21232e",
+      main: "#000000",
+      light: "#333333",
+      dark: "#000000",
       contrastText: "#ffffff",
     },
     secondary: {
-      main: "#8F7E4C",
-      light: "#a5976f",
-      dark: "#645835",
-      contrastText: "#ffffff",
+      main: "#ffffff",
+      light: "#ffffff",
+      dark: "#b2b2b2",
+      contrastText: "#000000",
     },
     disabled: {
       dark: "#9a9a9a",

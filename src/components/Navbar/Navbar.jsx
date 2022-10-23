@@ -63,7 +63,7 @@ const Navbar = () => {
         <Toolbar
           sx={{ justifyContent: "space-between", height: "75px !important" }}
         >
-          <Box>
+          <Box display="flex" alignItems="center">
             <IconButton
               size="large"
               edge="start"
@@ -78,28 +78,36 @@ const Navbar = () => {
               <MenuIcon />
               <MenuIcon sx={{ marginLeft: "-6px" }} />
             </IconButton>
-            <Link
-              className={css({
-                textDecoration: "none",
-                color: scroll ? theme.palette.primary.main : "aliceblue",
-              })}
-              key={languageState.texts.Navbar.Left.Label}
-              to={languageState.texts.Navbar.Left.Link}
+
+            <Box
+              sx={{
+                opacity: { md: 1, xs: 0 },
+                width: { xs: "40px", md: "inherit" },
+              }}
             >
-              <Button
-                size="large"
-                sx={{
-                  fontWeight: "bold",
-                  color: scroll ? theme.palette.primary.main : "aliceblue",
-                  display: {
-                    md: "inherit",
-                    xs: "none",
-                  },
-                }}
-              >
-                {languageState.texts.Navbar.Left.Label}
-              </Button>
-            </Link>
+              {languageState.texts.Navbar.Left.map((item, index) => (
+                <Link
+                  className={css({
+                    textDecoration: "none",
+                    color: scroll ? theme.palette.primary.main : "aliceblue",
+                  })}
+                  key={item.Label}
+                  to={item.Link}
+                >
+                  <Button
+                    size="large"
+                    sx={{
+                      display:
+                        index > 0 ? { md: "inherit", xs: "none" } : "inherit",
+                      fontWeight: "bold",
+                      color: scroll ? theme.palette.primary.main : "aliceblue",
+                    }}
+                  >
+                    {item.Label}
+                  </Button>
+                </Link>
+              ))}
+            </Box>
           </Box>
           <Link
             className={css({ textDecoration: "none", color: "inherit" })}

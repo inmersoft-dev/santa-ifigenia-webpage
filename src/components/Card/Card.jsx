@@ -15,13 +15,13 @@ import { useLanguage } from "../../context/LanguageProvider";
 import defaultTomb from "../../assets/images/default-tomb.jpg";
 
 const Card = (props) => {
-  const { image, title, subtitle, id, delay, sx, limit } = props;
+  const { image, title, subtitle, id, delay, sx, subtitleLimit, titleLimit } =
+    props;
 
   const { languageState } = useLanguage();
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const [showContent, setShowContent] = useState(false);
 
   return (
     <Box
@@ -92,14 +92,15 @@ const Card = (props) => {
               variant="h5"
               sx={{ zIndex: 2, color: "aliceblue" }}
             >
-              {title}
+              {title.substring(0, titleLimit)}
+              {title.length > titleLimit ? "..." : ""}
             </Typography>
             <Typography
               variant="body1"
               sx={{ zIndex: 2, color: "aliceblue", marginBottom: "10px" }}
             >
-              {subtitle.substring(0, limit)}
-              {subtitle.length > limit ? "..." : ""}
+              {subtitle.substring(0, subtitleLimit)}
+              {subtitle.length > subtitleLimit ? "..." : ""}
             </Typography>
           </Box>
           <Typography
@@ -115,7 +116,8 @@ const Card = (props) => {
 
 Card.defaultProps = {
   id: 1,
-  limit: 100,
+  titleLimit: 100,
+  subtitleLimit: 100,
   delay: "0.3s",
   image: defaultTomb,
   title: "Tomb 1",
@@ -126,7 +128,8 @@ Card.defaultProps = {
 
 Card.propTypes = {
   id: PropTypes.number,
-  limit: PropTypes.number,
+  titleLimit: PropTypes.number,
+  subtittleLimit: PropTypes.number,
   delay: PropTypes.string,
   image: PropTypes.string,
   title: PropTypes.string,

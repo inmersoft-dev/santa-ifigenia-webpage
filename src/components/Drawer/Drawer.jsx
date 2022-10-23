@@ -44,14 +44,14 @@ const Drawer = (props) => {
         sx={{
           top: 0,
           left: 0,
-          width: "450px",
+          width: "305px",
           zIndex: 9999999,
           position: "fixed",
           minHeight: "100vh",
           padding: "90px 20px",
           transition: "all 500ms ease",
           backgroundColor: theme.palette.primary.main,
-          transform: visible ? "translateX(0px)" : "translateX(-450px)",
+          transform: visible ? "translateX(0px)" : "translateX(-305px)",
         }}
       >
         <IconButton

@@ -93,19 +93,22 @@ const News = () => {
             {languageState.texts.Sections.News.Title}
           </Typography>
         </InViewComponent>
-        <InViewComponent delay="0.2s" sx={{ justifyContent: "center" }}>
+        <InViewComponent
+          delay="0.2s"
+          sx={{ justifyContent: { md: "center", xs: "flex-start" } }}
+        >
           <Typography
             variant="body1"
             sx={{
-              width: "50%",
+              width: { md: "50%", xs: "100%" },
               marginTop: "20px",
-              textAlign: "center",
+              textAlign: { md: "center", xs: "left" },
             }}
           >
             {languageState.texts.Sections.News.Body}
           </Typography>
         </InViewComponent>
-        {!loading && news !== -1 && (
+        {!loading && news !== -1 && news.length > 0 && (
           <Box
             sx={{
               width: "100%",
@@ -188,14 +191,14 @@ const News = () => {
             </Box>
           </Box>
         )}
-        {!loading && news !== -1 && (
+        {!loading && news !== -1 && news.length > 0 && (
           <Box
             sx={{
               gap: "20px",
               display: "flex",
               marginTop: "100px",
               position: "relative",
-              justifyContent: "center",
+              justifyContent: { md: "center", xs: "flex-start" },
               flexWrap: { xl: "nowrap", xs: "wrap" },
             }}
           >
@@ -230,7 +233,8 @@ const News = () => {
                       : item.headerImages[0].url
                   }
                   delay={`0.${i + 3}s`}
-                  limit={60}
+                  titleLimit={60}
+                  subtitleLimit={60}
                   sx={{
                     minWidth: { lg: "450px", md: "100%" },
                     flex: { xl: "1 !important", xs: "inherit !important" },

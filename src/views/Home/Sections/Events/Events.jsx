@@ -86,7 +86,12 @@ const Events = () => {
           justifyContent: "center",
         }}
       >
-        <InViewComponent>
+        <InViewComponent
+          sx={{
+            width: "100%",
+            justifyContent: { md: "center", xs: "flex-start", display: "flex" },
+          }}
+        >
           <Typography
             variant="h2"
             sx={{ color: theme.palette.secondary.light }}
@@ -94,13 +99,16 @@ const Events = () => {
             {languageState.texts.Sections.Events.Title}
           </Typography>
         </InViewComponent>
-        <InViewComponent delay="0.2s" sx={{ justifyContent: "center" }}>
+        <InViewComponent
+          delay="0.2s"
+          sx={{ justifyContent: { md: "center", xs: "flex-start" } }}
+        >
           <Typography
             variant="body1"
             sx={{
-              width: "50%",
+              width: { md: "50%", xs: "100%" },
               marginTop: "20px",
-              textAlign: "center",
+              textAlign: { md: "center", xs: "left" },
               color: theme.palette.secondary.light,
             }}
           >

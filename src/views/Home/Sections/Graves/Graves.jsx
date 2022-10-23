@@ -72,14 +72,17 @@ const Graves = () => {
       }}
     >
       <InViewComponent>
-        <Typography variant="h2" sx={{ textAlign: "center" }}>
+        <Typography
+          variant="h2"
+          sx={{ textAlign: { md: "center", xs: "left" } }}
+        >
           {languageState.texts.Sections.Graves.Title}
         </Typography>
       </InViewComponent>
-      <InViewComponent delay="0.4s" sx={{ width: "50%" }}>
+      <InViewComponent delay="0.4s" sx={{ width: { md: "50%", xs: "100%" } }}>
         <Typography
           variant="body1"
-          sx={{ textAlign: "center", marginTop: "20px" }}
+          sx={{ textAlign: { md: "center", xs: "left" }, marginTop: "20px" }}
         >
           {languageState.texts.Sections.Graves.Body}
         </Typography>
@@ -90,7 +93,7 @@ const Graves = () => {
           marginTop: "100px",
           display: "flex",
           position: "relative",
-          justifyContent: "center",
+          justifyContent: { md: "center", xs: "flex-start" },
           flexWrap: { lg: "nowrap", xs: "wrap" },
         }}
       >
