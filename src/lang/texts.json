@@ -80,9 +80,9 @@
     },
     "Home": {
       "Hero": {
-        "Subtitle": "Monumento nacional",
+        "Subtitle": "Monumentos Nacionales",
         "Title": "Santa Ifigenia",
-        "Body": "Inaugurado en febrero de 1868. Declarado monumento nacional en 1937 y ratificado por el gobierno de Fidel Castro en 1979"
+        "Body": "Inaugurado en febrero de 1868. Declarado Monumento Nacional en 1937 y ratificado por el gobierno de Fidel Castro en 1979"
       },
       "AreaTab": {
         "Tabs": ["Tumbas", "Rutas", "Noticias", "Eventos"]

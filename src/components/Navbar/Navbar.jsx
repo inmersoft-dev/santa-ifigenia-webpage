@@ -91,6 +91,10 @@ const Navbar = () => {
                 sx={{
                   fontWeight: "bold",
                   color: scroll ? theme.palette.primary.main : "aliceblue",
+                  display: {
+                    md: "inherit",
+                    xs: "none",
+                  },
                 }}
               >
                 {languageState.texts.Navbar.Left.Label}
@@ -112,7 +116,7 @@ const Navbar = () => {
             </Typography>
           </Link>
           <Box sx={{ opacity: { md: 1, xs: 0 } }}>
-            {languageState.texts.Navbar.Links.map((item) => (
+            {languageState.texts.Navbar.Links.map((item, index) => (
               <Link
                 className={css({
                   textDecoration: "none",
@@ -124,6 +128,8 @@ const Navbar = () => {
                 <Button
                   size="large"
                   sx={{
+                    display:
+                      index > 0 ? { md: "inherit", xs: "none" } : "inherit",
                     fontWeight: "bold",
                     color: scroll ? theme.palette.primary.main : "aliceblue",
                   }}
