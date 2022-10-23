@@ -72,7 +72,7 @@ const Graves = () => {
       }}
     >
       <InViewComponent>
-        <Typography variant="h2">
+        <Typography variant="h2" sx={{ textAlign: "center" }}>
           {languageState.texts.Sections.Graves.Title}
         </Typography>
       </InViewComponent>
@@ -87,7 +87,7 @@ const Graves = () => {
       <Box
         sx={{
           gap: "20px",
-          marginTop: { lg: "100px", md: "70px", xs: "40px" },
+          marginTop: "100px",
           display: "flex",
           position: "relative",
           justifyContent: "center",

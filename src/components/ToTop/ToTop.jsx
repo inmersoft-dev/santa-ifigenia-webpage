@@ -9,6 +9,9 @@ import ArrowDropDownCircleIcon from "@mui/icons-material/ArrowDropDownCircle";
 // context
 import { useLanguage } from "../../context/LanguageProvider";
 
+// utils
+import { scrollTo } from "../../utils/function";
+
 const ToTop = () => {
   const theme = useTheme();
   const { languageState } = useLanguage();
@@ -29,24 +32,27 @@ const ToTop = () => {
   }, [onScroll]);
 
   return (
-    <Tooltip title={languageState.texts.Tooltips.ToTop}>
-      <IconButton
-        sx={{
-          position: "fixed",
-          bottom: "20px",
-          right: "20px",
-          zIndex: 999,
-        }}
-      >
-        <ArrowDropDownCircleIcon
+    scroll && (
+      <Tooltip title={languageState.texts.Tooltips.ToTop}>
+        <IconButton
           sx={{
-            color: theme.palette.secondary.light,
-            transform: "rotate(180deg)",
-            fontSize: "2rem",
+            position: "fixed",
+            bottom: "20px",
+            right: "20px",
+            zIndex: 999,
           }}
-        />
-      </IconButton>
-    </Tooltip>
+          onClick={scrollTo}
+        >
+          <ArrowDropDownCircleIcon
+            sx={{
+              color: theme.palette.secondary.light,
+              transform: "rotate(180deg)",
+              fontSize: "2rem",
+            }}
+          />
+        </IconButton>
+      </Tooltip>
+    )
   );
 };
 

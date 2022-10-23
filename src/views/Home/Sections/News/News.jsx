@@ -45,7 +45,6 @@ const News = () => {
       const response = await newsList({ count: 4, page: 1, reduced: true });
       if (response.status === 200) {
         const { list } = response;
-        console.log("news", list);
         setNews(list);
       } else {
         setNews(-1);
@@ -84,9 +83,9 @@ const News = () => {
         display="flex"
         sx={{
           width: "100%",
-          justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
+          justifyContent: "center",
         }}
       >
         <InViewComponent>
@@ -99,7 +98,7 @@ const News = () => {
             variant="body1"
             sx={{
               width: "50%",
-              marginTop: "40px",
+              marginTop: "20px",
               textAlign: "center",
             }}
           >
@@ -110,7 +109,7 @@ const News = () => {
           <Box
             sx={{
               width: "100%",
-              marginTop: { lg: "100px", md: "70px", xs: "40px" },
+              marginTop: "100px",
               display: { lg: "flex", xs: "none" },
               alignItems: "center",
               justifyContent: "space-between",
@@ -193,11 +192,11 @@ const News = () => {
           <Box
             sx={{
               gap: "20px",
-              marginTop: { md: "70px", xs: "40px" },
               display: "flex",
+              marginTop: "100px",
               position: "relative",
               justifyContent: "center",
-              flexWrap: { lg: "nowrap", xs: "wrap" },
+              flexWrap: { xl: "nowrap", xs: "wrap" },
             }}
           >
             <Card
@@ -215,7 +214,7 @@ const News = () => {
               sx={{
                 display: { lg: "none", xs: "flex" },
                 minWidth: { lg: "450px", md: "100%" },
-                flex: { lg: "flex !important", xs: "inherit !important" },
+                flex: { xl: "1 !important", xs: "inherit !important" },
               }}
             />
             {news !== -1 &&
@@ -234,7 +233,7 @@ const News = () => {
                   limit={60}
                   sx={{
                     minWidth: { lg: "450px", md: "100%" },
-                    flex: { lg: "flex !important", xs: "inherit !important" },
+                    flex: { xl: "1 !important", xs: "inherit !important" },
                   }}
                 />
               ))}

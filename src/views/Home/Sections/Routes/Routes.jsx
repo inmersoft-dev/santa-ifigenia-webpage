@@ -112,7 +112,8 @@ const Routes = () => {
               key={item.id}
               sx={{
                 width: "100%",
-                marginTop: { lg: "100px", md: "70px", xs: "40px" },
+                marginTop:
+                  i === 0 ? "100px" : { lg: "100px", md: "70px", xs: "40px" },
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",

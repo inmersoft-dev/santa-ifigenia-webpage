@@ -25,7 +25,7 @@ const Hero = () => {
     >
       <Box
         sx={{
-          width: "50%",
+          width: { md: "50%", xs: "100%" },
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

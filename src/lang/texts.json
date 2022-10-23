@@ -105,8 +105,12 @@
       },
       "SearchAddressPlaceholder": "Escribe para buscar dirección"
     },
+    "Footer": {
+      "Develop": "Desarrollado por"
+    },
     "General": {
-      "Company": "Santa Ifigenia"
+      "Company": "Santa Ifigenia",
+      "Creator": "Inmersoft"
     },
     "Errors": {
       "NotConnected": "No tienes conexión con el servidor",
