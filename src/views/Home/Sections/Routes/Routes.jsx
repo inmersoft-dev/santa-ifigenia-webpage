@@ -7,9 +7,6 @@ import { css } from "@emotion/css";
 // @mui/material
 import { useTheme, Box, Button, Typography } from "@mui/material";
 
-// sito components
-import SitoImage from "sito-image";
-
 // own components
 import Empty from "../../../../components/Empty/Empty";
 import Error from "../../../../components/Error/Error";
@@ -116,21 +113,29 @@ const Routes = () => {
                 width: "70%",
               }}
             >
-              <InViewComponent delay={`0.${i * 1}s`}>
+              <InViewComponent
+                delay={`0.${i * 1}s`}
+                sx={{
+                  width: { lg: "450px", md: "300px", xs: "100%" },
+                  height: { lg: "450px", xs: "300px" },
+                  marginBottom: { md: 0, xs: "40px" },
+                }}
+              >
                 <Box
                   component="a"
                   href={`/details?id=${item.id}`}
                   sx={{
-                    width: { lg: "450px", md: "300px", xs: "250px" },
-                    height: { lg: "450px", md: "300px", xs: "250px" },
-                    marginRight: i % 2 === 0 ? "40px" : 0,
-                    marginLeft: i % 2 === 0 ? 0 : "40px",
+                    width: { lg: "450px", md: "300px", xs: "100%" },
+                    height: { lg: "450px", xs: "300px" },
+                    marginRight: { md: i % 2 === 0 ? "40px" : 0, xs: 0 },
+                    marginLeft: { md: i % 2 !== 0 ? "40px" : 0, xs: 0 },
                     backgroundImage: `url(${
                       item.headerImages[0] === null
                         ? defaultTomb
                         : item.headerImage[0]
                     })`,
                     backgroundSize: "100%",
+                    backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
                     transition: "background-size 500ms ease",
                     "&:hover": {
@@ -141,7 +146,7 @@ const Routes = () => {
               </InViewComponent>
               <Box
                 sx={{
-                  width: "700px",
+                  width: { lg: "700px", md: "500px", xs: "100%" },
                   display: "flex",
                   flexDirection: "column",
                   alignItems: i % 2 === 0 ? "flex-start" : "flex-end",
