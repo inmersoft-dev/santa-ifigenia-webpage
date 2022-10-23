@@ -108,8 +108,8 @@ const News = () => {
             <InViewComponent
               delay="0.1s"
               sx={{
-                width: { xl: "60%", lg: "400px", md: "350px", xs: "100%" },
-                height: { xl: "500px", lg: "400px", xs: "300px" },
+                width: { xl: "50%", lg: "400px", md: "350px", xs: "100%" },
+                height: { lg: "400px", xs: "300px" },
                 marginBottom: { md: 0, xs: "40px" },
               }}
             >
@@ -123,7 +123,7 @@ const News = () => {
                     md: "350px",
                     xs: "100%",
                   },
-                  height: { xl: "500px", lg: "400px", xs: "300px" },
+                  height: { lg: "400px", xs: "300px" },
                   marginRight: { md: "40px", xs: 0 },
                   backgroundImage: `url(${
                     news[0].headerImages[0] === null
@@ -178,7 +178,7 @@ const News = () => {
           <Box
             sx={{
               gap: "20px",
-              marginTop: { lg: "100px", md: "70px", xs: "40px" },
+              marginTop: { md: "70px", xs: "40px" },
               display: "flex",
               position: "relative",
               justifyContent: "center",

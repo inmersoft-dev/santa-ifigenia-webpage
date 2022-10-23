@@ -26,6 +26,9 @@
       },
       "News": {
         "Title": "Mantente actualizado"
+      },
+      "Events": {
+        "Title": "Últimos eventos"
       }
     },
     "Navbar": {

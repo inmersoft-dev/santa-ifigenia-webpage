@@ -120,8 +120,8 @@ const Routes = () => {
               <InViewComponent
                 delay={`0.${i * 1}s`}
                 sx={{
-                  width: { xl: "60%", lg: "400px", md: "350px", xs: "100%" },
-                  height: { xl: "500px", lg: "400px", xs: "300px" },
+                  width: { xl: "50%", lg: "400px", md: "350px", xs: "100%" },
+                  height: { lg: "400px", xs: "300px" },
                   marginBottom: { md: 0, xs: "40px" },
                 }}
               >
@@ -135,7 +135,7 @@ const Routes = () => {
                       md: "350px",
                       xs: "100%",
                     },
-                    height: { xl: "500px", lg: "400px", xs: "300px" },
+                    height: { lg: "400px", xs: "300px" },
                     marginRight: { md: i % 2 === 0 ? "40px" : 0, xs: 0 },
                     marginLeft: { md: i % 2 !== 0 ? "40px" : 0, xs: 0 },
                     backgroundImage: `url(${
@@ -155,10 +155,13 @@ const Routes = () => {
               </InViewComponent>
               <Box
                 sx={{
-                  width: { lg: "700px", md: "500px", xs: "100%" },
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: i % 2 === 0 ? "flex-start" : "flex-end",
+                  alignItems: {
+                    md: i % 2 === 0 ? "flex-start" : "flex-end",
+                    xs: "flex-start",
+                  },
+                  width: { lg: "700px", md: "500px", xs: "100%" },
                 }}
               >
                 <InViewComponent delay={`0.${i + 2}s`}>
@@ -166,7 +169,10 @@ const Routes = () => {
                     variant="h4"
                     sx={{
                       color: theme.palette.secondary.light,
-                      textAlign: i % 2 === 0 ? "left" : "right",
+                      textAlign: {
+                        md: i % 2 === 0 ? "left" : "right",
+                        xs: "left",
+                      },
                     }}
                   >
                     {item.title}
@@ -178,7 +184,10 @@ const Routes = () => {
                     sx={{
                       marginTop: "20px",
                       color: theme.palette.secondary.light,
-                      textAlign: i % 2 === 0 ? "left" : "right",
+                      textAlign: {
+                        md: i % 2 === 0 ? "left" : "right",
+                        xs: "left",
+                      },
                     }}
                   >
                     {item.subtitle.substring(0, 150)}

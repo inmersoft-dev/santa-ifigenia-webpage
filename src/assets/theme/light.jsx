@@ -12,9 +12,9 @@ const light = createTheme({
       contrastText: "#ffffff",
     },
     secondary: {
-      main: "#645835",
+      main: "#8F7E4C",
       light: "#a5976f",
-      dark: "#8F7E4C",
+      dark: "#645835",
       contrastText: "#ffffff",
     },
     disabled: {
