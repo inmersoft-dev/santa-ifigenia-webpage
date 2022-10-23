@@ -80,7 +80,9 @@ const Drawer = (props) => {
             {languageState.texts.General.Company}
           </Typography>
         </Link>
-        <Box sx={{ marginTop: "40px" }}>
+        <Box
+          sx={{ display: "flex", flexDirection: "column", marginTop: "40px" }}
+        >
           {languageState.texts.Navbar.DrawerLinks.map((item) => (
             <Link
               className={css({

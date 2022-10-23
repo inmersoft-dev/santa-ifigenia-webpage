@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 
 // @mui/material
@@ -73,6 +74,14 @@ const Graves = () => {
       <InViewComponent>
         <Typography variant="h2">
           {languageState.texts.Sections.Graves.Title}
+        </Typography>
+      </InViewComponent>
+      <InViewComponent delay="0.4s" sx={{ width: "50%" }}>
+        <Typography
+          variant="body1"
+          sx={{ textAlign: "center", marginTop: "20px" }}
+        >
+          {languageState.texts.Sections.Graves.Body}
         </Typography>
       </InViewComponent>
       <Box

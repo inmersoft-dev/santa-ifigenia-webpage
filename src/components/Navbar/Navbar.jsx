@@ -57,7 +57,7 @@ const Navbar = () => {
           height: "75px !important",
           boxShadow: "none",
           transition: "background-color 500ms ease",
-          backgroundColor: !scroll ? "white" : theme.palette.primary.main,
+          backgroundColor: scroll ? "white" : theme.palette.primary.main,
         }}
       >
         <Toolbar
@@ -72,7 +72,7 @@ const Navbar = () => {
               sx={{
                 mr: 2,
                 minHeight: "64px",
-                color: !scroll ? theme.palette.primary.main : "aliceblue",
+                color: scroll ? theme.palette.primary.main : "aliceblue",
               }}
             >
               <MenuIcon />
@@ -81,7 +81,7 @@ const Navbar = () => {
             <Link
               className={css({
                 textDecoration: "none",
-                color: !scroll ? theme.palette.primary.main : "aliceblue",
+                color: scroll ? theme.palette.primary.main : "aliceblue",
               })}
               key={languageState.texts.Navbar.Left.Label}
               to={languageState.texts.Navbar.Left.Link}
@@ -90,7 +90,7 @@ const Navbar = () => {
                 size="large"
                 sx={{
                   fontWeight: "bold",
-                  color: !scroll ? theme.palette.primary.main : "aliceblue",
+                  color: scroll ? theme.palette.primary.main : "aliceblue",
                 }}
               >
                 {languageState.texts.Navbar.Left.Label}
@@ -105,7 +105,7 @@ const Navbar = () => {
               variant="h6"
               sx={{
                 fontWeight: "bold",
-                color: !scroll ? theme.palette.primary.main : "inherit",
+                color: scroll ? theme.palette.primary.main : "inherit",
               }}
             >
               {languageState.texts.General.Company}
@@ -116,7 +116,7 @@ const Navbar = () => {
               <Link
                 className={css({
                   textDecoration: "none",
-                  color: !scroll ? theme.palette.primary.main : "aliceblue",
+                  color: scroll ? theme.palette.primary.main : "aliceblue",
                 })}
                 key={item.Label}
                 to={item.Link}
@@ -125,7 +125,7 @@ const Navbar = () => {
                   size="large"
                   sx={{
                     fontWeight: "bold",
-                    color: !scroll ? theme.palette.primary.main : "aliceblue",
+                    color: scroll ? theme.palette.primary.main : "aliceblue",
                   }}
                 >
                   {item.Label}

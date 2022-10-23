@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -5,7 +6,7 @@ import { Link } from "react-router-dom";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { useTheme, Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 // own components
 import Card from "../../../../components/Card/Card";
@@ -25,7 +26,6 @@ import { useNotification } from "../../../../context/NotificationProvider";
 import defaultTomb from "../../../../assets/images/default-tomb.jpg";
 
 const News = () => {
-  const theme = useTheme();
   const { languageState } = useLanguage();
   const { setNotificationState } = useNotification();
 
@@ -92,6 +92,18 @@ const News = () => {
         <InViewComponent>
           <Typography variant="h2">
             {languageState.texts.Sections.News.Title}
+          </Typography>
+        </InViewComponent>
+        <InViewComponent delay="0.2s" sx={{ justifyContent: "center" }}>
+          <Typography
+            variant="body1"
+            sx={{
+              width: "50%",
+              marginTop: "40px",
+              textAlign: "center",
+            }}
+          >
+            {languageState.texts.Sections.News.Body}
           </Typography>
         </InViewComponent>
         {!loading && news !== -1 && (

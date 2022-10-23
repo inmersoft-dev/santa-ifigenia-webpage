@@ -15,6 +15,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Box, CssBaseline } from "@mui/material";
 
 // own components
+import ToTop from "./components/ToTop/ToTop";
 import Notification from "./components/Notification/Notification";
 
 // layouts
@@ -37,6 +38,7 @@ const App = () => {
       <ThemeProvider theme={light}>
         <CssBaseline />
         <Notification />
+        <ToTop />
         <Box className="App">
           <BrowserRouter>
             <Routes>

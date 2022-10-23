@@ -1,5 +1,8 @@
 {
   "es": {
+    "Tooltips": {
+      "ToTop": "Ir al inicio"
+    },
     "NotFound": {
       "Title": { "Bold": "404.", "Regular": "Es un error" },
       "Body": "El URL solicitado no fue encontrado",
@@ -14,7 +17,8 @@
     },
     "Sections": {
       "Graves": {
-        "Title": "Tumbas más antiguas"
+        "Title": "Figuras históricas sepultadas",
+        "Body": "En él reposan los restos de 32 generales de las guerras de independencia de Cuba. El mausoleo más importante está dedicado a José Julián Martí Pérez, quien estuvo sepultado junto al resto de los veteranos mambises."
       },
       "Routes": {
         "Title": "Rutas más visitadas Rutas más visitadas",
@@ -25,7 +29,8 @@
         }
       },
       "News": {
-        "Title": "Mantente actualizado"
+        "Title": "Mantente actualizado",
+        "Body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptates itaque esse iusto animi explicabo consectetur culpa saepe cupiditate ut facere incidunt aut minus ducimus tempora excepturi ullam doloremque voluptate!"
       },
       "Events": {
         "Title": "Festivales y eventos",
@@ -65,8 +70,20 @@
         }
       ]
     },
+    "Discover": {
+      "Hero": {
+        "Graves": {
+          "Title": "Cementerio de Santa Ifigenia",
+          "Body": "El cementerio de Santa Ifigenia es el camposanto, necrópolis o panteón principal del Oriente cubano y de la ciudad de Santiago de Cuba."
+        }
+      }
+    },
     "Home": {
-      "Hero": {},
+      "Hero": {
+        "Subtitle": "Monumento nacional",
+        "Title": "Santa Ifigenia",
+        "Body": "Inaugurado en febrero de 1868. Declarado monumento nacional en 1937 y ratificado por el gobierno de Fidel Castro en 1979"
+      },
       "AreaTab": {
         "Tabs": ["Tumbas", "Rutas", "Noticias", "Eventos"]
       }

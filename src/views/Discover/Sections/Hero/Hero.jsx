@@ -1,28 +1,46 @@
 // @mui/material
-import { Box } from "@mui/material";
+import { useTheme, Box, Typography } from "@mui/material";
 
-// images
-import heroBgSM from "../../../../assets/images/hero-bg-sm.jpg";
-import heroBgMD from "../../../../assets/images/hero-bg-md.jpg";
-import heroBgLG from "../../../../assets/images/hero-bg-lg.jpg";
-import heroBgXL from "../../../../assets/images/hero-bg-xl.jpg";
+// context
+import { useLanguage } from "../../../../context/LanguageProvider";
 
 const Hero = () => {
+  const theme = useTheme();
+  const { languageState } = useLanguage();
+
   return (
     <Box
       sx={{
-        minHeight: "70vh",
+        minHeight: "60vh",
         minWidth: "100%",
-        /* backgroundImage: {
-          xs: `url(${heroBgSM})`,
-          md: `url(${heroBgMD})`,
-          lg: `url(${heroBgLG})`,
-          xl: `url(${heroBgXL})`,
+        display: "flex",
+        alignItems: "center",
+        padding: {
+          md: "0px 5rem",
+          sm: "0px 40px",
+          xs: "0px 20px",
         },
-        backgroundSize: "cover",
-        backgroundPosition: "center", */
       }}
-    ></Box>
+    >
+      <Box
+        sx={{
+          width: "50%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        <Typography
+          variant="h3"
+          sx={{ marginBottom: "20px", color: theme.palette.primary.main }}
+        >
+          {languageState.texts.Discover.Hero.Graves.Title}
+        </Typography>
+        <Typography variant="body1" sx={{ color: theme.palette.primary.main }}>
+          {languageState.texts.Discover.Hero.Graves.Body}
+        </Typography>
+      </Box>
+    </Box>
   );
 };
 
