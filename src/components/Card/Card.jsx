@@ -42,6 +42,7 @@ const Card = (props) => {
         backgroundPosition: "center",
         flex: { md: 1, xs: "inherit" },
         minWidth: { md: "450px", xs: "340px" },
+        ...sx,
       }}
     >
       <Box

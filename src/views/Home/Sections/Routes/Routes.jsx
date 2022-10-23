@@ -63,8 +63,12 @@ const Routes = () => {
       sx={{
         display: "flex",
         minWidth: "100%",
-        minHeight: "70vh",
-        padding: "40px 0",
+        minHeight: "100vh",
+        padding: {
+          md: "100px 5rem",
+          sm: "100px 40px",
+          xs: "100px 20px",
+        },
         overflow: "hidden",
         alignItems: "center",
         position: "relative",
@@ -102,22 +106,22 @@ const Routes = () => {
             <Box
               key={item.id}
               sx={{
-                marginTop: "40px",
+                width: "100%",
+                marginTop: { lg: "100px", md: "70px", xs: "40px" },
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
+                justifyContent: "space-between",
                 flexDirection: {
                   md: i % 2 === 0 ? "row" : "row-reverse",
                   xs: "column",
                 },
-                width: "70%",
               }}
             >
               <InViewComponent
                 delay={`0.${i * 1}s`}
                 sx={{
-                  width: { lg: "450px", md: "300px", xs: "100%" },
-                  height: { lg: "450px", xs: "300px" },
+                  width: { xl: "60%", lg: "400px", md: "350px", xs: "100%" },
+                  height: { xl: "500px", lg: "400px", xs: "300px" },
                   marginBottom: { md: 0, xs: "40px" },
                 }}
               >
@@ -125,8 +129,13 @@ const Routes = () => {
                   component="a"
                   href={`/details?id=${item.id}`}
                   sx={{
-                    width: { lg: "450px", md: "300px", xs: "100%" },
-                    height: { lg: "450px", xs: "300px" },
+                    width: {
+                      xl: "100%",
+                      lg: "400px",
+                      md: "350px",
+                      xs: "100%",
+                    },
+                    height: { xl: "500px", lg: "400px", xs: "300px" },
                     marginRight: { md: i % 2 === 0 ? "40px" : 0, xs: 0 },
                     marginLeft: { md: i % 2 !== 0 ? "40px" : 0, xs: 0 },
                     backgroundImage: `url(${

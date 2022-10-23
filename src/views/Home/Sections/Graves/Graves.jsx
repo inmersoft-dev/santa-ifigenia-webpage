@@ -55,6 +55,11 @@ const Graves = () => {
         display: "flex",
         minWidth: "100%",
         minHeight: "100vh",
+        padding: {
+          md: "100px 5rem",
+          sm: "100px 40px",
+          xs: "100px 20px",
+        },
         alignItems: "center",
         position: "relative",
         flexDirection: "column",
@@ -62,16 +67,18 @@ const Graves = () => {
       }}
     >
       <InViewComponent>
-        <Typography variant="h2" sx={{ marginBottom: "40px" }}>
+        <Typography variant="h2">
           {languageState.texts.Sections.Graves.Title}
         </Typography>
       </InViewComponent>
       <Box
         sx={{
           gap: "20px",
+          marginTop: { lg: "100px", md: "70px", xs: "40px" },
           display: "flex",
           position: "relative",
           justifyContent: "center",
+          flexWrap: { lg: "nowrap", xs: "wrap" },
         }}
       >
         {graves !== -1 &&
@@ -84,7 +91,10 @@ const Graves = () => {
               image={item.headerImages[0]}
               delay={`0.${i + 3}s`}
               limit={60}
-              sx={{ width: { md: "450px", xs: "340px" }, flex: "inherit" }}
+              sx={{
+                minWidth: { lg: "450px", md: "100%" },
+                flex: { lg: "flex !important", xs: "inherit !important" },
+              }}
             />
           ))}
       </Box>

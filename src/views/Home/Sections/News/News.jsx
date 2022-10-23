@@ -65,7 +65,11 @@ const News = () => {
         display: "flex",
         minWidth: "100%",
         minHeight: "100vh",
-        padding: "40px 0",
+        padding: {
+          md: "100px 5rem",
+          sm: "100px 40px",
+          xs: "100px 20px",
+        },
         overflow: "hidden",
         alignItems: "center",
         position: "relative",
@@ -83,32 +87,44 @@ const News = () => {
         }}
       >
         <InViewComponent>
-          <Typography variant="h2" sx={{ marginBottom: "40px" }}>
+          <Typography variant="h2">
             {languageState.texts.Sections.News.Title}
           </Typography>
         </InViewComponent>
         {!loading && news !== -1 && (
           <Box
             sx={{
-              marginTop: "40px",
-              display: "flex",
+              width: "100%",
+              marginTop: { lg: "100px", md: "70px", xs: "40px" },
+              display: { lg: "flex", xs: "none" },
               alignItems: "center",
-              justifyContent: "center",
+              justifyContent: "space-between",
               flexDirection: {
                 md: "row",
                 xs: "column",
               },
-              width: "70%",
             }}
           >
-            <InViewComponent delay="0.1s">
+            <InViewComponent
+              delay="0.1s"
+              sx={{
+                width: { xl: "60%", lg: "400px", md: "350px", xs: "100%" },
+                height: { xl: "500px", lg: "400px", xs: "300px" },
+                marginBottom: { md: 0, xs: "40px" },
+              }}
+            >
               <Box
                 component="a"
                 href={`/details?id=${news[0].id}`}
                 sx={{
-                  width: { lg: "450px", md: "300px", xs: "250px" },
-                  height: { lg: "450px", md: "300px", xs: "250px" },
-                  marginRight: "40px",
+                  width: {
+                    xl: "100%",
+                    lg: "400px",
+                    md: "350px",
+                    xs: "100%",
+                  },
+                  height: { xl: "500px", lg: "400px", xs: "300px" },
+                  marginRight: { md: "40px", xs: 0 },
                   backgroundImage: `url(${
                     news[0].headerImages[0] === null
                       ? defaultTomb
@@ -126,7 +142,7 @@ const News = () => {
             </InViewComponent>
             <Box
               sx={{
-                width: "700px",
+                width: { lg: "700px", md: "500px", xs: "100%" },
                 display: "flex",
                 flexDirection: "column",
               }}
@@ -158,30 +174,57 @@ const News = () => {
             </Box>
           </Box>
         )}
-        <Box
-          sx={{
-            gap: "20px",
-            display: "flex",
-            position: "relative",
-            justifyContent: "center",
-          }}
-        >
-          {news !== -1 &&
-            news
-              .splice(1, 3)
-              .map((item, i) => (
+        {!loading && news !== -1 && (
+          <Box
+            sx={{
+              gap: "20px",
+              marginTop: { lg: "100px", md: "70px", xs: "40px" },
+              display: "flex",
+              position: "relative",
+              justifyContent: "center",
+              flexWrap: { lg: "nowrap", xs: "wrap" },
+            }}
+          >
+            <Card
+              id={news[0].id}
+              key={news[0].id}
+              title={news[0].title}
+              subtitle={news[0].subtitle}
+              image={
+                news[0].headerImages[0] === null
+                  ? defaultTomb
+                  : news[0].headerImages[0].url
+              }
+              delay="0.3s"
+              limit={60}
+              sx={{
+                display: { lg: "none", xs: "flex" },
+                minWidth: { lg: "450px", md: "100%" },
+                flex: { lg: "flex !important", xs: "inherit !important" },
+              }}
+            />
+            {news !== -1 &&
+              news.splice(1, 3).map((item, i) => (
                 <Card
                   id={item.id}
                   key={item.id}
                   title={item.title}
                   subtitle={item.subtitle}
-                  image={item.headerImages[0]}
+                  image={
+                    item.headerImages[0] === null
+                      ? defaultTomb
+                      : item.headerImages[0].url
+                  }
                   delay={`0.${i + 3}s`}
                   limit={60}
-                  sx={{ width: { md: "450px", xs: "340px" }, flex: "inherit" }}
+                  sx={{
+                    minWidth: { lg: "450px", md: "100%" },
+                    flex: { lg: "flex !important", xs: "inherit !important" },
+                  }}
                 />
               ))}
-        </Box>
+          </Box>
+        )}
         <Loading visible={loading} />
         {news !== -1 && !news.length && <Empty />}
         {news === -1 && <Error onAction={fetch} />}
