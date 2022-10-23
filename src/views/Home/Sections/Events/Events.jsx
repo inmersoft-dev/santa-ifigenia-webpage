@@ -1,12 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
-// @emotion/css
-import { css } from "@emotion/css";
 
 // @mui/material
-import { useTheme, Box, Button, Typography } from "@mui/material";
+import { useTheme, Box, Typography } from "@mui/material";
 
 // own components
 import Card from "../../../../components/Card/Card";
@@ -137,8 +133,11 @@ const Events = () => {
                       : item.headerImages[0].url
                   }
                   sx={{
-                    minWidth: i === 0 ? "100%" : { lg: "450px", md: "100%" },
-                    flex: i === 0 ? "1 !important" : "inherit",
+                    minWidth: i === 0 ? "100%" : { lg: "450px", xs: "100%" },
+                    flex:
+                      i === 0
+                        ? "1 !important"
+                        : { lg: "1 !important", md: "inherit" },
                   }}
                 />
               ))}
