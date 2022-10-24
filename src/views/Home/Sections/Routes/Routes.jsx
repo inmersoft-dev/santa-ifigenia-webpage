@@ -218,7 +218,11 @@ const Routes = () => {
             </Box>
           ))}
 
-        <Loading visible={loading} />
+        <Loading
+          visible={loading}
+          color="secondary"
+          sx={{ background: theme.palette.primary.main }}
+        />
         {routes !== -1 && !routes.length && <Empty />}
         {routes === -1 && <Error onAction={fetch} />}
       </Box>
