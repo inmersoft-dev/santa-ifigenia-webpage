@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 
 // @mui components
-import { Typography } from "@mui/material";
+import { useTheme, Typography } from "@mui/material";
 
 // sito components
 import SitoContainer from "sito-container";
@@ -15,6 +15,7 @@ import SitoContainer from "sito-container";
 import { useLanguage } from "../../context/LanguageProvider";
 
 const Empty = (props) => {
+  const theme = useTheme();
   const { sx, icon } = props;
 
   const { languageState } = useLanguage();
@@ -28,8 +29,7 @@ const Empty = (props) => {
     >
       {icon}
       <Typography
-        sx={{ marginTop: "15px" }}
-        color="inherit"
+        sx={{ marginTop: "15px", color: theme.palette.disabled.main }}
         variant="subtitle1"
       >
         {languageState.texts.Empty.Body}
@@ -40,7 +40,7 @@ const Empty = (props) => {
 
 Empty.defaultProps = {
   sx: {},
-  icon: <ReceiptLongIcon color="secondary" size="large" />,
+  icon: <ReceiptLongIcon color="disabled" size="large" />,
   title: undefined,
   button: undefined,
 };

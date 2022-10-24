@@ -17,7 +17,7 @@ const Footer = () => {
       sx={{
         flexGrow: 1,
         height: "54px",
-        backgroundColor: theme.palette.primary.dark,
+        backgroundColor: theme.palette.primary.light,
         display: "flex",
         alignItems: "center",
         padding: {

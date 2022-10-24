@@ -10,7 +10,7 @@ import { Box, useTheme, CircularProgress } from "@mui/material";
 
 const Loading = forwardRef((props, ref) => {
   const theme = useTheme();
-  const { sx, visible, background } = props;
+  const { sx, visible, background, color } = props;
 
   return (
     <Box
@@ -32,7 +32,7 @@ const Loading = forwardRef((props, ref) => {
         ...sx,
       }}
     >
-      <CircularProgress />
+      <CircularProgress color={color} />
     </Box>
   );
 });
@@ -42,6 +42,7 @@ Loading.defaultProps = {
   visible: false,
   fontSize: "3rem",
   background: undefined,
+  color: "primary",
 };
 
 Loading.propTypes = {
@@ -49,6 +50,7 @@ Loading.propTypes = {
   visible: PropTypes.bool,
   fontSize: PropTypes.string,
   background: PropTypes.string,
+  color: PropTypes.string,
 };
 
 export default Loading;

@@ -44,8 +44,8 @@ const ToTop = () => {
           onClick={scrollTo}
         >
           <ArrowDropDownCircleIcon
+            color="info"
             sx={{
-              color: theme.palette.secondary.light,
               transform: "rotate(180deg)",
               fontSize: "2rem",
             }}

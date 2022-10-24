@@ -12,7 +12,7 @@ import Loading from "../../../../components/Loading/Loading";
 import InViewComponent from "../../../../components/InViewComponent/InViewComponent";
 
 // services
-import { eventList } from "../../../../services/events/get";
+import { newsList } from "../../../../services/news/get";
 
 // context
 import { useLanguage } from "../../../../context/LanguageProvider";
@@ -39,7 +39,7 @@ const Events = () => {
   const fetch = async () => {
     setLoading(true);
     try {
-      const response = await eventList({ count: 4, page: 1, reduced: true });
+      const response = await newsList({ count: 4, page: 1, reduced: true });
       if (response.status === 200) {
         const { list } = response;
         setEvents(list);
@@ -151,7 +151,11 @@ const Events = () => {
               ))}
           </Box>
         )}
-        <Loading visible={loading} />
+        <Loading
+          visible={loading}
+          color="secondary"
+          sx={{ background: theme.palette.primary.main }}
+        />
         {events !== -1 && !events.length && <Empty />}
         {events === -1 && <Error onAction={fetch} />}
       </Box>
