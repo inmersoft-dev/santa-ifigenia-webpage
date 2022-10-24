@@ -11,4 +11,16 @@ Santa-Ifigenia-Webpage
 - Search
 - Obituary
 - Visit Us
+  - Contact Us
+  - Scheduler
+  - Cemetery Map
+  - Newsletter
 - About Us
+  - Mission
+  - Vision
+- Discover
+  - Hero
+    - Graves
+    - Routes
+    - News
+    - Events
