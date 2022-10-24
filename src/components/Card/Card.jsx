@@ -115,7 +115,7 @@ const Card = (props) => {
 };
 
 Card.defaultProps = {
-  id: 1,
+  id: "1",
   titleLimit: 100,
   subtitleLimit: 100,
   delay: "0.3s",
@@ -127,9 +127,9 @@ Card.defaultProps = {
 };
 
 Card.propTypes = {
-  id: PropTypes.number,
   titleLimit: PropTypes.number,
   subtittleLimit: PropTypes.number,
+  id: PropTypes.string,
   delay: PropTypes.string,
   image: PropTypes.string,
   title: PropTypes.string,
