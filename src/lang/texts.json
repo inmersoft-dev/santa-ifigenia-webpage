@@ -96,12 +96,24 @@
         }
       }
     },
+    "AboutUs": {
+      "Content": "El cementerio de Santa Ifigenia de la ciudad de Santiago de Cuba, inaugurado en 1868, acumula valores históricos y culturales que le han hecho merecedor de la condición de cementerio patrimonial reconocido como Monumento Nacional el 7 de septiembre de 1937 y el 19 de mayo de 1979.\n\nLos terrenos para su construcción fueron comprados desde 1858 hasta 1910, a la familia Bravo–Ferrer y a María Ibarra y Ortiz, viuda de Agüero. En octubre de 1858, fueron bendecidos por el deán de la Catedral Gabriel Marcelino Quiroga; pero su inauguración demoró hasta febrero de 1868, aunque el primer entierro público se efectuó el 22 de abril del propio año.\n\nSu existencia ha estado condicionada por una fuerte presencia de héroes y mártires de la nación cubana, motivado por ser la necrópolis de la ciudad cabecera del Oriente de Cuba, zona donde se fraguaron e iniciaron las diferentes etapas de nuestra única Guerra por la definitiva independencia del pueblo cubano.\n\nLa destacada y activa participación de los mejores hijos de esta isla en el acontecer libertario se hace evidente en el recorrido por este lugar sagrado, considerado el Altar de la Patria, se enaltece con personalidades de la historia, la cultura, las ciencias y de toda la diversidad del desarrollo económico social que evocan en su conjunto el devenir de lo cubano.\n\nSu alta significación histórica se hace acompañar por el destacado valor del arte funerario contenido en él, con tendencias estilísticas marcadas por la época de construcción. Los monumentos neoclásicos ocuparon los primeros patios, le continúan los eclécticos que definen su imagen. El art decó con su sencillez expresiva y el Movimiento Moderno en los años 50, llenaron algunos espacios vacios.\n\nSe suma un universo de esculturas, símbolos, lápidas, ángeles, querubines, cruces y madonas, con una amplia variedad de actitudes relacionadas con la vida y la muerte, que generan un paisaje a modo de parque histórico o Museo a cielo abierto. Aquí el silencio, el mármol, el granito y las áreas verdes garantizan un ambiente de encuentro respetuoso y marcado interés cultural por su contenido."
+    },
     "Home": {
-      "Hero": {
-        "Subtitle": "Monumentos Nacionales",
-        "Title": "Santa Ifigenia",
-        "Body": "Inaugurado en febrero de 1868. Declarado Monumento Nacional en 1937 y ratificado por el gobierno de Fidel Castro en 1979"
-      },
+      "Hero": [
+        {
+          "Subtitle": "Monumentos Nacionales",
+          "Title": "Santa Ifigenia",
+          "Body": "Inaugurado en febrero de 1868. Declarado Monumento Nacional en 1937 y ratificado por el gobierno de Fidel Castro en 1979"
+        },
+        {
+          "Subtitle": "Monumentos Nacionales",
+          "Title": "Santa Ifigenia",
+          "Body": "Museo, patrimonio y referente histórico. Estamos más allá de ser sólo un cementerio",
+          "SeeMore": "Ver más",
+          "Link": "/about-us"
+        }
+      ],
       "AreaTab": {
         "Tabs": ["Tumbas", "Rutas", "Noticias", "Eventos"]
       }

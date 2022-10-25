@@ -27,6 +27,8 @@ import Details from "./views/Details/Details";
 import VisitUs from "./views/VisitUs/VisitUs";
 import NotFound from "./views/NotFound/NotFound";
 import Discover from "./views/Discover/Discover";
+import AboutUs from "./views/AboutUs/AboutUs";
+import Obituary from "./views/Obituary/Obituary";
 
 const App = () => {
   useEffect(() => {
@@ -47,6 +49,8 @@ const App = () => {
                 <Route exact path="/details" element={<Details />} />
                 <Route exact path="/visit-us" element={<VisitUs />} />
                 <Route exact path="/discover" element={<Discover />} />
+                <Route exact path="/about-us" element={<AboutUs />} />
+                <Route exact path="/obituary" element={<Obituary />} />
               </Route>
               <Route path="*" element={<NotFound />} />
             </Routes>

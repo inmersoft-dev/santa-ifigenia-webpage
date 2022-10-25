@@ -1,18 +1,30 @@
+import { useState, useEffect } from "react";
+
 // @mui/material
-import { useTheme, Box, Typography } from "@mui/material";
+import { useTheme, Box } from "@mui/material";
 
 // context
 import { useLanguage } from "../../../../context/LanguageProvider";
 
-// own components
-import InViewComponent from "../../../../components/InViewComponent/InViewComponent";
-
 // images
 import heroBgXl from "../../../../assets/images/hero-bg-xl.jpg";
+
+// local components
+import First from "./Sections/First";
+import Second from "./Sections/Second";
 
 const Hero = () => {
   const theme = useTheme();
   const { languageState } = useLanguage();
+
+  const [hero, setHero] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (hero < languageState.texts.Home.Hero.length - 1) setHero(hero + 1);
+      else setHero(0);
+    }, 5000);
+  }, [hero]);
 
   return (
     <Box
@@ -32,53 +44,18 @@ const Hero = () => {
         backgroundSize: "cover !important",
       }}
     >
-      {
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            background: `${theme.palette.primary.main}8c`,
-            top: 0,
-            left: 0,
-            position: "absolute",
-          }}
-        />
-      }
       <Box
         sx={{
-          display: "flex",
-          zIndex: 1,
-          flexDirection: "column",
-          justifyContent: "center",
-          width: { lg: "60%", md: "75%", sm: "80%", xs: "100%" },
+          width: "100%",
           height: "100%",
+          background: `${theme.palette.primary.main}8c`,
+          top: 0,
+          left: 0,
+          position: "absolute",
         }}
-      >
-        <InViewComponent delay="0.1s">
-          <Typography variant="subtitle1" sx={{ color: "aliceblue" }}>
-            {languageState.texts.Home.Hero.Subtitle}
-          </Typography>
-        </InViewComponent>
-        <InViewComponent delay="0.2s">
-          <Typography
-            variant="h1"
-            sx={{ marginBottom: "40px", color: "aliceblue" }}
-          >
-            {languageState.texts.Home.Hero.Title}
-          </Typography>
-        </InViewComponent>
-        <InViewComponent delay="0.3s">
-          <Typography
-            variant="body1"
-            sx={{
-              color: "aliceblue",
-              width: { lg: "70%", md: "75%", sm: "80%", xs: "100%" },
-            }}
-          >
-            {languageState.texts.Home.Hero.Body}
-          </Typography>
-        </InViewComponent>
-      </Box>
+      />
+      {hero === 0 && <First />}
+      {hero === 1 && <Second />}
     </Box>
   );
 };
